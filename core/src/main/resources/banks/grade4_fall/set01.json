@@ -1,0 +1,293 @@
+{
+  "id": "g4f-s01",
+  "title": "Practice Test 1",
+  "questions": [
+    {
+      "id": "g4f-s01-q01",
+      "topic": "NUMBER",
+      "skill": "Mental addition",
+      "difficulty": 1,
+      "prompt": "What is 125 + 375 + 500?",
+      "answer": "1000",
+      "hint": "Add 125 and 375 first. They make a round number.",
+      "solution": "125 + 375 = 500. Then 500 + 500 = 1000."
+    },
+    {
+      "id": "g4f-s01-q02",
+      "topic": "GEOMETRY",
+      "skill": "Units: pounds and ounces",
+      "difficulty": 1,
+      "prompt": "Theo's pumpkin weighs 3 pounds 4 ounces. How many ounces does it weigh? (1 pound = 16 ounces)",
+      "answer": "52",
+      "unit": "ounces",
+      "hint": "Change the 3 pounds into ounces first.",
+      "solution": "3 pounds = 3 × 16 = 48 ounces. 48 + 4 = 52 ounces."
+    },
+    {
+      "id": "g4f-s01-q03",
+      "topic": "GEOMETRY",
+      "skill": "Perimeter",
+      "difficulty": 1,
+      "prompt": "A rectangular garden is 9 feet long and 6 feet wide. What is the perimeter of the garden?",
+      "answer": "30",
+      "unit": "feet",
+      "hint": "Perimeter is the distance all the way around: two lengths and two widths.",
+      "solution": "9 + 6 + 9 + 6 = 30 feet."
+    },
+    {
+      "id": "g4f-s01-q04",
+      "topic": "ALGEBRA",
+      "skill": "Number patterns",
+      "difficulty": 1,
+      "prompt": "What number comes next in this pattern?\n3, 7, 11, 15, 19, ___",
+      "answer": "23",
+      "hint": "How much is added each time?",
+      "solution": "The pattern adds 4 each time. 19 + 4 = 23."
+    },
+    {
+      "id": "g4f-s01-q05",
+      "topic": "LOGIC",
+      "skill": "Calendar",
+      "difficulty": 1,
+      "prompt": "Today is Monday. What day of the week will it be 10 days from today?",
+      "answer": "Thursday",
+      "kind": "WORD",
+      "accept": [
+        "Thu",
+        "Thurs"
+      ],
+      "hint": "In 7 days it will be Monday again.",
+      "solution": "7 days from Monday is Monday again. 3 more days: Tuesday, Wednesday, Thursday."
+    },
+    {
+      "id": "g4f-s01-q06",
+      "topic": "NUMBER",
+      "skill": "Money",
+      "difficulty": 2,
+      "prompt": "Leo has 3 quarters, 4 dimes and 6 nickels. He buys a juice box for 95¢. How many cents does he have left?",
+      "answer": "50",
+      "unit": "¢",
+      "hint": "Find how many cents Leo has in all before he buys anything.",
+      "solution": "Quarters: 3 × 25 = 75¢. Dimes: 4 × 10 = 40¢. Nickels: 6 × 5 = 30¢. Total: 75 + 40 + 30 = 145¢. After buying: 145 − 95 = 50¢."
+    },
+    {
+      "id": "g4f-s01-q07",
+      "topic": "ALGEBRA",
+      "skill": "Equal costs",
+      "difficulty": 2,
+      "prompt": "Two apple pies and one cake cost $26 in all. The cake costs $8. How much does one apple pie cost?",
+      "answer": "9",
+      "unitBefore": "$",
+      "hint": "Take away the cake's price. What do the two pies cost together?",
+      "solution": "Two pies cost 26 − 8 = $18. One pie costs 18 ÷ 2 = $9."
+    },
+    {
+      "id": "g4f-s01-q08",
+      "topic": "GEOMETRY",
+      "skill": "Elapsed time",
+      "difficulty": 2,
+      "prompt": "A movie started at 1:50 PM and lasted 1 hour 45 minutes. At what time did the movie end?",
+      "answer": "3:35 PM",
+      "kind": "WORD",
+      "accept": [
+        "3:35",
+        "3:35pm"
+      ],
+      "hint": "Add the 1 hour first, then the 45 minutes.",
+      "solution": "1:50 PM + 1 hour = 2:50 PM. 2:50 PM + 10 minutes = 3:00 PM, and 35 more minutes makes 3:35 PM."
+    },
+    {
+      "id": "g4f-s01-q09",
+      "topic": "LOGIC",
+      "skill": "Listing numbers",
+      "difficulty": 2,
+      "prompt": "How many 2-digit numbers have digits that add up to 5?",
+      "answer": "5",
+      "unit": "numbers",
+      "hint": "Start with a tens digit of 1 and list them in order.",
+      "solution": "14, 23, 32, 41, 50. That is 5 numbers. (05 is not a 2-digit number.)"
+    },
+    {
+      "id": "g4f-s01-q10",
+      "topic": "NUMBER",
+      "skill": "Multiples",
+      "difficulty": 2,
+      "prompt": "What is the largest 3-digit number that can be divided by 8 with no remainder?",
+      "answer": "992",
+      "hint": "Divide 999 by 8. What is the remainder?",
+      "solution": "999 ÷ 8 = 124 remainder 7. So 999 − 7 = 992 = 8 × 124 is the largest."
+    },
+    {
+      "id": "g4f-s01-q11",
+      "topic": "GEOMETRY",
+      "skill": "Counting squares",
+      "difficulty": 2,
+      "prompt": "How many squares of any size are in this 3 by 3 grid?",
+      "answer": "14",
+      "unit": "squares",
+      "hint": "Count the small 1 by 1 squares, then the 2 by 2 squares, then the 3 by 3 square.",
+      "solution": "1 by 1 squares: 9. 2 by 2 squares: 4. 3 by 3 squares: 1. Total: 9 + 4 + 1 = 14.",
+      "figure": {
+        "type": "grid",
+        "rows": 3,
+        "cols": 3
+      }
+    },
+    {
+      "id": "g4f-s01-q12",
+      "topic": "ALGEBRA",
+      "skill": "Number pyramid",
+      "difficulty": 2,
+      "prompt": "In this number pyramid, each box is the sum of the two boxes right below it. What number goes in the top box?",
+      "answer": "30",
+      "hint": "Fill in the pyramid one row at a time, starting from the bottom.",
+      "solution": "Second row from the bottom: 3 + 5 = 8, 5 + 2 = 7, 2 + 6 = 8. Next row: 8 + 7 = 15, 7 + 8 = 15. Top: 15 + 15 = 30.",
+      "figure": {
+        "type": "pyramid",
+        "rows": [
+          [
+            "?"
+          ],
+          [
+            "",
+            ""
+          ],
+          [
+            "",
+            "",
+            ""
+          ],
+          [
+            "3",
+            "5",
+            "2",
+            "6"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g4f-s01-q13",
+      "topic": "LOGIC",
+      "skill": "Arrangements",
+      "difficulty": 2,
+      "prompt": "Ana, Ben, Cara and Dev sit in a row of 4 seats. Ana must sit in the first seat. In how many different ways can the four of them sit?",
+      "answer": "6",
+      "unit": "ways",
+      "hint": "Ana's seat is fixed. How many ways can the other 3 kids fill the other 3 seats?",
+      "solution": "Seat 2 has 3 choices, seat 3 then has 2 choices, and seat 4 has 1 choice. 3 × 2 × 1 = 6 ways."
+    },
+    {
+      "id": "g4f-s01-q14",
+      "topic": "NUMBER",
+      "skill": "Number riddle",
+      "difficulty": 2,
+      "prompt": "I am a 2-digit number. I am a multiple of 7. My ones digit is 2 more than my tens digit. What number am I?",
+      "answer": "35",
+      "hint": "List the 2-digit multiples of 7: 14, 21, 28, ...",
+      "solution": "Check the multiples of 7: 14, 21, 28, 35, ... In 35, the ones digit 5 is 2 more than the tens digit 3. No other multiple of 7 works, so the answer is 35."
+    },
+    {
+      "id": "g4f-s01-q15",
+      "topic": "ALGEBRA",
+      "skill": "Times as many",
+      "difficulty": 2,
+      "prompt": "Ethan and Zara picked 48 apples altogether. Ethan picked 3 times as many apples as Zara. How many apples did Ethan pick?",
+      "answer": "36",
+      "unit": "apples",
+      "hint": "If Zara's apples are 1 part, Ethan's are 3 parts. How many parts in all?",
+      "solution": "Zara has 1 part and Ethan has 3 parts, so 4 parts = 48 apples. 1 part = 48 ÷ 4 = 12. Ethan picked 3 × 12 = 36 apples."
+    },
+    {
+      "id": "g4f-s01-q16",
+      "topic": "GEOMETRY",
+      "skill": "Area of an L-shape",
+      "difficulty": 3,
+      "prompt": "All corners of this shape are right angles. What is its area?",
+      "answer": "42",
+      "unit": "sq cm",
+      "hint": "Think of a full 8 by 6 rectangle with a small corner cut out.",
+      "solution": "The full rectangle would be 8 × 6 = 48 sq cm. The missing corner is 3 × 2 = 6 sq cm. 48 − 6 = 42 sq cm.",
+      "figure": {
+        "type": "shape",
+        "points": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 8,
+            "y": 0
+          },
+          {
+            "x": 8,
+            "y": 4
+          },
+          {
+            "x": 5,
+            "y": 4
+          },
+          {
+            "x": 5,
+            "y": 6
+          },
+          {
+            "x": 0,
+            "y": 6
+          }
+        ],
+        "sideLabels": {
+          "0": "8 cm",
+          "1": "4 cm",
+          "2": "3 cm",
+          "3": "2 cm",
+          "4": "5 cm",
+          "5": "6 cm"
+        }
+      }
+    },
+    {
+      "id": "g4f-s01-q17",
+      "topic": "LOGIC",
+      "skill": "Worst case",
+      "difficulty": 3,
+      "prompt": "A bag has 6 red, 5 green and 4 yellow candies. Without looking, what is the fewest number of candies you must take out to be sure you have 3 candies of the same color?",
+      "answer": "7",
+      "unit": "candies",
+      "hint": "Imagine the unluckiest picks: how many can you take without getting 3 of one color?",
+      "solution": "Unluckiest case: 2 red, 2 green and 2 yellow, which is 6 candies with no 3 of a color. The 7th candy must make 3 of some color. Answer: 7."
+    },
+    {
+      "id": "g4f-s01-q18",
+      "topic": "NUMBER",
+      "skill": "Digit puzzles",
+      "difficulty": 3,
+      "prompt": "Use each of the digits 2, 4, 6 and 8 exactly once to make two 2-digit numbers. What is the smallest possible difference between the two numbers?",
+      "answer": "14",
+      "hint": "Make the tens digits close together. Then make the bigger number's ones digit small and the smaller number's ones digit big.",
+      "solution": "Try tens digits 4 and 6: the bigger number should be as small as possible (62) and the smaller number as big as possible (48). 62 − 48 = 14. Other choices give bigger differences, like 46 − 28 = 18 or 82 − 64 = 18."
+    },
+    {
+      "id": "g4f-s01-q19",
+      "topic": "ALGEBRA",
+      "skill": "Ages",
+      "difficulty": 3,
+      "prompt": "Owen is 4 years older than his sister Lily. In 3 years, their ages will add up to 30. How old is Owen now?",
+      "answer": "14",
+      "unit": "years old",
+      "hint": "In 3 years, both of them get 3 years older. What do their ages add up to now?",
+      "solution": "In 3 years each is 3 years older, so the total grows by 6. Now their ages add up to 30 − 6 = 24. Take away Owen's extra 4: 24 − 4 = 20, and half is 10, so Lily is 10 and Owen is 14."
+    },
+    {
+      "id": "g4f-s01-q20",
+      "topic": "LOGIC",
+      "skill": "Counting pairs",
+      "difficulty": 3,
+      "prompt": "At a Halloween party, each of the 6 kids gives one piece of candy to every other kid at the party. How many pieces of candy are given out in all?",
+      "answer": "30",
+      "unit": "pieces",
+      "hint": "How many pieces does one kid give away?",
+      "solution": "Each kid gives a piece to the 5 other kids, so each gives 5 pieces. 6 kids × 5 pieces = 30 pieces. (This is not like handshakes: Ana giving to Ben and Ben giving to Ana are 2 different pieces.)"
+    }
+  ]
+}

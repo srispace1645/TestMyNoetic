@@ -1,0 +1,272 @@
+{
+  "id": "g4f-s02",
+  "title": "Practice Test 2",
+  "questions": [
+    {
+      "id": "g4f-s02-q01",
+      "topic": "NUMBER",
+      "skill": "Subtraction",
+      "difficulty": 1,
+      "prompt": "What is 1,000 − 368?",
+      "answer": "632",
+      "hint": "Try 999 − 368 first, then add 1.",
+      "solution": "999 − 368 = 631, so 1,000 − 368 = 631 + 1 = 632."
+    },
+    {
+      "id": "g4f-s02-q02",
+      "topic": "ALGEBRA",
+      "skill": "Missing number",
+      "difficulty": 1,
+      "prompt": "What number makes this true?\n7 × ___ = 56",
+      "answer": "8",
+      "hint": "Which number times 7 gives 56?",
+      "solution": "7 × 8 = 56, so the missing number is 8."
+    },
+    {
+      "id": "g4f-s02-q03",
+      "topic": "GEOMETRY",
+      "skill": "Perimeter",
+      "difficulty": 1,
+      "prompt": "A square tile has sides that are 7 inches long. What is the perimeter of the tile?",
+      "answer": "28",
+      "unit": "inches",
+      "hint": "A square has 4 equal sides.",
+      "solution": "4 sides × 7 inches = 28 inches."
+    },
+    {
+      "id": "g4f-s02-q04",
+      "topic": "LOGIC",
+      "skill": "Outfits",
+      "difficulty": 1,
+      "prompt": "Maya has 3 different T-shirts and 2 different pairs of shorts. How many different outfits of one T-shirt and one pair of shorts can she make?",
+      "answer": "6",
+      "unit": "outfits",
+      "hint": "Each T-shirt can go with each pair of shorts.",
+      "solution": "Each of the 3 T-shirts goes with 2 pairs of shorts: 3 × 2 = 6 outfits."
+    },
+    {
+      "id": "g4f-s02-q05",
+      "topic": "GEOMETRY",
+      "skill": "Units: hours and minutes",
+      "difficulty": 1,
+      "prompt": "How many minutes are in 3 hours and 20 minutes?",
+      "answer": "200",
+      "unit": "minutes",
+      "hint": "1 hour = 60 minutes.",
+      "solution": "3 hours = 3 × 60 = 180 minutes. 180 + 20 = 200 minutes."
+    },
+    {
+      "id": "g4f-s02-q06",
+      "topic": "LOGIC",
+      "skill": "Places in line",
+      "difficulty": 2,
+      "prompt": "Kids are waiting in one line for a hayride. Priya is 7th from the front and 9th from the back. How many kids are in the line?",
+      "answer": "15",
+      "unit": "kids",
+      "hint": "Count the kids in front of Priya and behind her, then add Priya herself.",
+      "solution": "6 kids are in front of Priya and 8 kids are behind her. 6 + 8 + 1 (Priya) = 15 kids."
+    },
+    {
+      "id": "g4f-s02-q07",
+      "topic": "NUMBER",
+      "skill": "Division with remainders",
+      "difficulty": 2,
+      "prompt": "A school bus can hold 36 students. What is the smallest number of buses needed to take 150 students on a field trip?",
+      "answer": "5",
+      "unit": "buses",
+      "hint": "4 buses carry 4 × 36 students. Is that enough?",
+      "solution": "150 ÷ 36 = 4 remainder 6. Four buses carry 144 students, so 6 students still need a ride. That makes 5 buses."
+    },
+    {
+      "id": "g4f-s02-q08",
+      "topic": "ALGEBRA",
+      "skill": "Input and output",
+      "difficulty": 2,
+      "prompt": "The same rule turns each In number into its Out number. What number goes in the box with the question mark?",
+      "answer": "25",
+      "hint": "When In goes up by 1, how much does Out go up?",
+      "solution": "Out goes up by 3 each time In goes up by 1, and 2 × 3 + 1 = 7. The rule is \"times 3, plus 1\". 8 × 3 + 1 = 25.",
+      "figure": {
+        "type": "table",
+        "header": [
+          "In",
+          "Out"
+        ],
+        "rows": [
+          [
+            "2",
+            "7"
+          ],
+          [
+            "3",
+            "10"
+          ],
+          [
+            "5",
+            "16"
+          ],
+          [
+            "8",
+            "?"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "g4f-s02-q09",
+      "topic": "GEOMETRY",
+      "skill": "Angles on a clock",
+      "difficulty": 2,
+      "prompt": "The minute hand of a clock moves from the 12 to the 4. How many degrees does it turn?",
+      "answer": "120",
+      "unit": "degrees",
+      "hint": "A full turn is 360 degrees, and the clock has 12 numbers.",
+      "solution": "Moving from one number to the next is 360 ÷ 12 = 30 degrees. From 12 to 4 is 4 steps: 4 × 30 = 120 degrees.",
+      "figure": {
+        "type": "clock",
+        "hour": 12,
+        "minute": 20
+      }
+    },
+    {
+      "id": "g4f-s02-q10",
+      "topic": "LOGIC",
+      "skill": "Venn diagrams",
+      "difficulty": 2,
+      "prompt": "In a class of 25 students, 14 have a dog, 9 have a cat, and 5 have both a dog and a cat. How many students have neither a dog nor a cat?",
+      "answer": "7",
+      "unit": "students",
+      "hint": "Fill in the Venn diagram: dog only, both, cat only.",
+      "solution": "Dog only: 14 − 5 = 9. Cat only: 9 − 5 = 4. Students with a pet: 9 + 5 + 4 = 18. Neither: 25 − 18 = 7.",
+      "figure": {
+        "type": "venn",
+        "leftLabel": "Dog",
+        "rightLabel": "Cat",
+        "both": "5"
+      }
+    },
+    {
+      "id": "g4f-s02-q11",
+      "topic": "NUMBER",
+      "skill": "Prime numbers",
+      "difficulty": 2,
+      "prompt": "How many prime numbers are there between 20 and 40?",
+      "answer": "4",
+      "unit": "prime numbers",
+      "hint": "A prime number has exactly two factors: 1 and itself. Skip even numbers and numbers ending in 5.",
+      "solution": "The primes between 20 and 40 are 23, 29, 31 and 37. That is 4 primes."
+    },
+    {
+      "id": "g4f-s02-q12",
+      "topic": "ALGEBRA",
+      "skill": "Growing patterns",
+      "difficulty": 2,
+      "prompt": "Arjun reads 10 pages on Monday. Each day after that, he reads 6 more pages than the day before. How many pages does he read in all from Monday through Friday?",
+      "answer": "110",
+      "unit": "pages",
+      "hint": "Write down the pages for each day, Monday to Friday.",
+      "solution": "Mon 10, Tue 16, Wed 22, Thu 28, Fri 34. 10 + 16 + 22 + 28 + 34 = 110 pages."
+    },
+    {
+      "id": "g4f-s02-q13",
+      "topic": "LOGIC",
+      "skill": "Handshakes",
+      "difficulty": 2,
+      "prompt": "Five friends meet at the park. Each friend shakes hands once with each of the other friends. How many handshakes are there in all?",
+      "answer": "10",
+      "unit": "handshakes",
+      "hint": "The first friend shakes 4 hands. The second friend has already shaken hands with the first one.",
+      "solution": "Count new handshakes: 4 + 3 + 2 + 1 + 0 = 10 handshakes."
+    },
+    {
+      "id": "g4f-s02-q14",
+      "topic": "ALGEBRA",
+      "skill": "Heads and legs",
+      "difficulty": 2,
+      "prompt": "Bikes have 2 wheels and tricycles have 3 wheels. A school yard has 12 bikes and tricycles with 29 wheels in all. How many tricycles are there?",
+      "answer": "5",
+      "unit": "tricycles",
+      "hint": "Pretend all 12 are bikes. How many wheels would that be?",
+      "solution": "12 bikes would have 24 wheels. There are 29 − 24 = 5 extra wheels. Each tricycle has 1 extra wheel, so there are 5 tricycles."
+    },
+    {
+      "id": "g4f-s02-q15",
+      "topic": "NUMBER",
+      "skill": "Hidden digits",
+      "difficulty": 2,
+      "prompt": "The same digit is hidden in both boxes of this correct addition problem. What is the hidden digit?",
+      "answer": "6",
+      "hint": "Look at the ones column: 8 + □ must end in 4.",
+      "solution": "8 + □ ends in 4, so □ is 6 (8 + 6 = 14). Check: 68 + 46 = 114. ✓",
+      "figure": {
+        "type": "text",
+        "lines": [
+          "  □ 8",
+          "+ 4 □",
+          "─────",
+          "1 1 4"
+        ]
+      }
+    },
+    {
+      "id": "g4f-s02-q16",
+      "topic": "GEOMETRY",
+      "skill": "Squares and rectangles",
+      "difficulty": 3,
+      "prompt": "Three equal squares are put side by side in a row to make a rectangle. The perimeter of the rectangle is 48 cm. What is the area of the rectangle?",
+      "answer": "108",
+      "unit": "sq cm",
+      "hint": "Count how many square sides go around the outside of the rectangle.",
+      "solution": "Going around the rectangle, you pass 8 sides of the small squares. Each side is 48 ÷ 8 = 6 cm. Each square has area 6 × 6 = 36 sq cm, so the rectangle has area 3 × 36 = 108 sq cm.",
+      "figure": {
+        "type": "grid",
+        "rows": 1,
+        "cols": 3
+      }
+    },
+    {
+      "id": "g4f-s02-q17",
+      "topic": "NUMBER",
+      "skill": "Counting digits",
+      "difficulty": 3,
+      "prompt": "Zoe writes the page numbers 1, 2, 3, … up to 60 in her scrapbook. How many digits does she write in all?",
+      "answer": "111",
+      "unit": "digits",
+      "hint": "Pages 1–9 use 1 digit each. Pages 10–60 use 2 digits each.",
+      "solution": "Pages 1–9: 9 digits. Pages 10–60: that's 51 pages with 2 digits each, so 102 digits. 9 + 102 = 111 digits."
+    },
+    {
+      "id": "g4f-s02-q18",
+      "topic": "LOGIC",
+      "skill": "Ordering",
+      "difficulty": 3,
+      "prompt": "Ava, Ben, Cal, Dee and Eli ran a race. Ava finished ahead of Ben. Ben finished ahead of Dee. Cal finished right after Dee. Eli finished last. Who finished in 3rd place?",
+      "answer": "Dee",
+      "kind": "WORD",
+      "hint": "Eli is 5th. Put the others in order using the clues.",
+      "solution": "Eli is 5th. Ava is ahead of Ben, Ben is ahead of Dee, and Cal is right after Dee. The only order is Ava, Ben, Dee, Cal, Eli. Dee is 3rd."
+    },
+    {
+      "id": "g4f-s02-q19",
+      "topic": "GEOMETRY",
+      "skill": "Painted cubes",
+      "difficulty": 3,
+      "prompt": "A big 4 × 4 × 4 cube is built from 64 small cubes. The outside of the big cube is painted red. How many small cubes have no paint on them at all?",
+      "answer": "8",
+      "unit": "cubes",
+      "hint": "The unpainted cubes are hidden in the middle. Take away the outside layer.",
+      "solution": "Removing the outside layer leaves a 2 × 2 × 2 cube in the middle. 2 × 2 × 2 = 8 cubes have no paint."
+    },
+    {
+      "id": "g4f-s02-q20",
+      "topic": "ALGEBRA",
+      "skill": "Working backwards",
+      "difficulty": 3,
+      "prompt": "Lily got some candy on Halloween. She gave half of it to her brother. Then she ate 4 pieces. Then she gave half of what was left to her friend. Now she has 9 pieces. How many pieces of candy did Lily start with?",
+      "answer": "44",
+      "unit": "pieces",
+      "hint": "Start at the end with 9 pieces and undo each step.",
+      "solution": "Undo the last step: before giving half to her friend she had 9 × 2 = 18. Before eating 4 she had 18 + 4 = 22. Before giving half to her brother she had 22 × 2 = 44 pieces."
+    }
+  ]
+}

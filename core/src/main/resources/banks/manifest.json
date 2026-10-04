@@ -1,0 +1,19 @@
+{
+  "banks": [
+    {
+      "id": "grade4_fall",
+      "grade": 4,
+      "season": "Fall",
+      "title": "Grade 4 · Fall 2026",
+      "contestStart": "2026-11-12",
+      "contestEnd": "2026-11-25",
+      "sets": [
+        "grade4_fall/set01.json",
+        "grade4_fall/set02.json",
+        "grade4_fall/set03.json",
+        "grade4_fall/set04.json",
+        "grade4_fall/set05.json"
+      ]
+    }
+  ]
+}

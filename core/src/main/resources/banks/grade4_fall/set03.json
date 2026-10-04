@@ -1,0 +1,249 @@
+{
+  "id": "g4f-s03",
+  "title": "Practice Test 3",
+  "questions": [
+    {
+      "id": "g4f-s03-q01",
+      "topic": "NUMBER",
+      "skill": "Multiplication",
+      "difficulty": 1,
+      "prompt": "What is 25 × 12?",
+      "answer": "300",
+      "hint": "Four 25s make 100. How many groups of four are in 12?",
+      "solution": "25 × 4 = 100, and 12 = 3 × 4. So 25 × 12 = 3 × 100 = 300."
+    },
+    {
+      "id": "g4f-s03-q02",
+      "topic": "GEOMETRY",
+      "skill": "Units: feet and inches",
+      "difficulty": 1,
+      "prompt": "Ben's dad is 5 feet 7 inches tall. How many inches tall is he? (1 foot = 12 inches)",
+      "answer": "67",
+      "unit": "inches",
+      "hint": "Change 5 feet into inches first.",
+      "solution": "5 feet = 5 × 12 = 60 inches. 60 + 7 = 67 inches."
+    },
+    {
+      "id": "g4f-s03-q03",
+      "topic": "ALGEBRA",
+      "skill": "Doubling patterns",
+      "difficulty": 1,
+      "prompt": "What number comes next in this pattern?\n2, 4, 8, 16, 32, ___",
+      "answer": "64",
+      "hint": "Each number is a certain amount times the number before it.",
+      "solution": "Each number is double the one before. 32 × 2 = 64."
+    },
+    {
+      "id": "g4f-s03-q04",
+      "topic": "LOGIC",
+      "skill": "Comparing",
+      "difficulty": 1,
+      "prompt": "Sam is taller than Kim. Kim is taller than Lee. Who is the shortest of the three?",
+      "answer": "Lee",
+      "kind": "WORD",
+      "hint": "Put the three names in order from tallest to shortest.",
+      "solution": "From tallest to shortest: Sam, Kim, Lee. Lee is the shortest."
+    },
+    {
+      "id": "g4f-s03-q05",
+      "topic": "NUMBER",
+      "skill": "Rounding",
+      "difficulty": 1,
+      "prompt": "Round 3,748 to the nearest hundred.",
+      "answer": "3700",
+      "hint": "Is 3,748 closer to 3,700 or to 3,800?",
+      "solution": "Look at the tens digit, 4. It is less than 5, so round down: 3,748 → 3,700."
+    },
+    {
+      "id": "g4f-s03-q06",
+      "topic": "ALGEBRA",
+      "skill": "Balance scales",
+      "difficulty": 2,
+      "prompt": "The scale is balanced. All the apples weigh the same. The pumpkin weighs 900 grams. How many grams does one apple weigh?",
+      "answer": "200",
+      "unit": "g",
+      "hint": "Take the 300 g weight off. What do the 3 apples weigh together?",
+      "solution": "The 3 apples and 300 g together weigh 900 g. So the 3 apples weigh 900 − 300 = 600 g, and one apple weighs 600 ÷ 3 = 200 g.",
+      "figure": {
+        "type": "balance",
+        "left": [
+          "Pumpkin 900 g"
+        ],
+        "right": [
+          "Apple",
+          "Apple",
+          "Apple",
+          "300 g"
+        ]
+      }
+    },
+    {
+      "id": "g4f-s03-q07",
+      "topic": "GEOMETRY",
+      "skill": "Area and perimeter",
+      "difficulty": 2,
+      "prompt": "A rectangular rug has an area of 72 square feet. Its length is 9 feet. What is the perimeter of the rug?",
+      "answer": "34",
+      "unit": "feet",
+      "hint": "Use the area to find the width first.",
+      "solution": "Width = 72 ÷ 9 = 8 feet. Perimeter = 9 + 8 + 9 + 8 = 34 feet."
+    },
+    {
+      "id": "g4f-s03-q08",
+      "topic": "LOGIC",
+      "skill": "Combinations",
+      "difficulty": 2,
+      "prompt": "Ella has a penny, a nickel, a dime and a quarter. She picks any 2 of the coins. How many different amounts of money can she make?",
+      "answer": "6",
+      "unit": "amounts",
+      "hint": "List every pair of coins and add them up.",
+      "solution": "1+5 = 6¢, 1+10 = 11¢, 1+25 = 26¢, 5+10 = 15¢, 5+25 = 30¢, 10+25 = 35¢. All 6 amounts are different."
+    },
+    {
+      "id": "g4f-s03-q09",
+      "topic": "NUMBER",
+      "skill": "Common multiples",
+      "difficulty": 2,
+      "prompt": "Kai can put all his marbles into equal groups of 4, or of 6, or of 10, with none left over each time. What is the smallest number of marbles Kai could have?",
+      "answer": "60",
+      "unit": "marbles",
+      "hint": "The number must be a multiple of 10. Check 10, 20, 30, …",
+      "solution": "Multiples of 10: 10, 20, 30, 40, 50, 60. The first one that is also a multiple of 4 and of 6 is 60."
+    },
+    {
+      "id": "g4f-s03-q10",
+      "topic": "ALGEBRA",
+      "skill": "Shape equations",
+      "difficulty": 2,
+      "prompt": "Each shape stands for a number.\n▲ + ▲ + ▲ = 27\n▲ + ■ = 15\nWhat number is ■?",
+      "answer": "6",
+      "hint": "Use the first line to find ▲.",
+      "solution": "▲ = 27 ÷ 3 = 9. Then 9 + ■ = 15, so ■ = 6."
+    },
+    {
+      "id": "g4f-s03-q11",
+      "topic": "GEOMETRY",
+      "skill": "Elapsed time",
+      "difficulty": 2,
+      "prompt": "School starts at 8:15 AM and ends at 2:50 PM. How many minutes long is the school day?",
+      "answer": "395",
+      "unit": "minutes",
+      "hint": "Count the hours from 8:15 AM to 2:15 PM, then add the extra minutes.",
+      "solution": "8:15 AM to 2:15 PM is 6 hours = 360 minutes. 2:15 PM to 2:50 PM is 35 minutes. 360 + 35 = 395 minutes."
+    },
+    {
+      "id": "g4f-s03-q12",
+      "topic": "LOGIC",
+      "skill": "Bar graphs",
+      "difficulty": 2,
+      "prompt": "The bar graph shows how many apples four kids picked. How many more apples did the kid who picked the most pick than the kid who picked the fewest?",
+      "answer": "9",
+      "unit": "apples",
+      "hint": "Find the tallest bar and the shortest bar.",
+      "solution": "Ben picked the most (18) and Cal picked the fewest (9). 18 − 9 = 9 apples.",
+      "figure": {
+        "type": "bars",
+        "title": "Apples picked",
+        "labels": [
+          "Ava",
+          "Ben",
+          "Cal",
+          "Dee"
+        ],
+        "values": [
+          12,
+          18,
+          9,
+          15
+        ],
+        "step": 3
+      }
+    },
+    {
+      "id": "g4f-s03-q13",
+      "topic": "NUMBER",
+      "skill": "Adding in pairs",
+      "difficulty": 2,
+      "prompt": "What is the sum of all the odd numbers from 1 to 19?\n1 + 3 + 5 + … + 17 + 19",
+      "answer": "100",
+      "hint": "Pair the first and last numbers: 1 + 19. Then 3 + 17. What do you notice?",
+      "solution": "1 + 19 = 20, 3 + 17 = 20, 5 + 15 = 20, 7 + 13 = 20, 9 + 11 = 20. Five pairs of 20 make 100."
+    },
+    {
+      "id": "g4f-s03-q14",
+      "topic": "ALGEBRA",
+      "skill": "Consecutive numbers",
+      "difficulty": 2,
+      "prompt": "The sum of three numbers in a row (like 4, 5, 6) is 72. What is the smallest of the three numbers?",
+      "answer": "23",
+      "hint": "The middle number is the sum divided by 3.",
+      "solution": "The middle number is 72 ÷ 3 = 24, so the numbers are 23, 24 and 25. The smallest is 23."
+    },
+    {
+      "id": "g4f-s03-q15",
+      "topic": "GEOMETRY",
+      "skill": "Angles",
+      "difficulty": 2,
+      "prompt": "A right angle is split into two smaller angles. One of them measures 35 degrees. How many degrees is the other angle?",
+      "answer": "55",
+      "unit": "degrees",
+      "hint": "A right angle measures 90 degrees.",
+      "solution": "90 − 35 = 55 degrees."
+    },
+    {
+      "id": "g4f-s03-q16",
+      "topic": "GEOMETRY",
+      "skill": "Posts around a shape",
+      "difficulty": 3,
+      "prompt": "A square garden has sides that are 12 meters long. Fence posts are placed every 3 meters around the edge of the garden, with a post at each corner. How many posts are there?",
+      "answer": "16",
+      "unit": "posts",
+      "hint": "Walk all the way around the garden. A closed loop is different from a straight fence.",
+      "solution": "The distance around the garden is 4 × 12 = 48 meters. Going around a closed loop, there is one post for every 3 meters: 48 ÷ 3 = 16 posts. (There is no extra post, because the last gap ends at the first post.)"
+    },
+    {
+      "id": "g4f-s03-q17",
+      "topic": "NUMBER",
+      "skill": "Remainders",
+      "difficulty": 3,
+      "prompt": "Jack has more than 20 but fewer than 40 baseball cards. When he puts them in piles of 5, he has 3 left over. When he puts them in piles of 4, he has 1 left over. How many cards does Jack have?",
+      "answer": "33",
+      "unit": "cards",
+      "hint": "List the numbers between 20 and 40 that leave 3 left over when split into 5s.",
+      "solution": "Numbers between 20 and 40 with 3 left over in piles of 5: 23, 28, 33, 38. Piles of 4: 23 leaves 3, 28 leaves 0, 33 leaves 1, 38 leaves 2. Only 33 works."
+    },
+    {
+      "id": "g4f-s03-q18",
+      "topic": "LOGIC",
+      "skill": "Seat swaps",
+      "difficulty": 3,
+      "prompt": "Amy, Bo, Cy and Di sat in seats 1, 2, 3 and 4. First, the kids in seats 1 and 2 switched. Next, the kids in seats 2 and 4 switched. Last, the kids in seats 3 and 4 switched. At the end, Amy was in seat 1, Bo in seat 2, Cy in seat 3 and Di in seat 4. Who sat in seat 1 at the very beginning?",
+      "answer": "Cy",
+      "kind": "WORD",
+      "hint": "Work backwards: undo the last switch first.",
+      "solution": "End: Amy, Bo, Cy, Di. Undo the 3–4 switch: Amy, Bo, Di, Cy. Undo the 2–4 switch: Amy, Cy, Di, Bo. Undo the 1–2 switch: Cy, Amy, Di, Bo. So Cy sat in seat 1 at the beginning."
+    },
+    {
+      "id": "g4f-s03-q19",
+      "topic": "ALGEBRA",
+      "skill": "Ages",
+      "difficulty": 3,
+      "prompt": "Mom is 36 years old and her son Ravi is 8. In how many years will Mom be exactly 3 times as old as Ravi?",
+      "answer": "6",
+      "unit": "years",
+      "hint": "Try adding the same number of years to both ages and check.",
+      "solution": "The difference in their ages is always 28. When Mom is 3 times Ravi's age, the difference is 2 times Ravi's age, so Ravi will be 28 ÷ 2 = 14. That is 14 − 8 = 6 years from now. Check: 42 = 3 × 14. ✓"
+    },
+    {
+      "id": "g4f-s03-q20",
+      "topic": "LOGIC",
+      "skill": "Ways to make change",
+      "difficulty": 3,
+      "prompt": "How many different ways can you make 30 cents using only nickels, dimes and quarters? (You don't have to use every kind of coin.)",
+      "answer": "5",
+      "unit": "ways",
+      "hint": "Start with the biggest coin. Can you use a quarter?",
+      "solution": "With a quarter: 25 + 5 (1 way). Without a quarter: 3 dimes; 2 dimes + 2 nickels; 1 dime + 4 nickels; 6 nickels (4 ways). Total: 5 ways."
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "id": "g4f-s05",
+  "title": "Practice Test 5",
+  "questions": [
+    {
+      "id": "g4f-s05-q01",
+      "topic": "NUMBER",
+      "skill": "Adding and subtracting",
+      "difficulty": 1,
+      "prompt": "What is 400 − 150 + 50?",
+      "answer": "300",
+      "hint": "Work from left to right.",
+      "solution": "400 − 150 = 250. Then 250 + 50 = 300."
+    },
+    {
+      "id": "g4f-s05-q02",
+      "topic": "ALGEBRA",
+      "skill": "Counting down",
+      "difficulty": 1,
+      "prompt": "What number comes next in this pattern?\n81, 72, 63, 54, ___",
+      "answer": "45",
+      "hint": "How much is taken away each time?",
+      "solution": "The pattern takes away 9 each time. 54 − 9 = 45."
+    },
+    {
+      "id": "g4f-s05-q03",
+      "topic": "GEOMETRY",
+      "skill": "Area",
+      "difficulty": 1,
+      "prompt": "A rectangle is 8 cm long and 5 cm wide. What is its area?",
+      "answer": "40",
+      "unit": "sq cm",
+      "hint": "Area of a rectangle = length × width.",
+      "solution": "8 × 5 = 40 square centimeters."
+    },
+    {
+      "id": "g4f-s05-q04",
+      "topic": "LOGIC",
+      "skill": "Calendar",
+      "difficulty": 1,
+      "prompt": "Today is Friday. What day of the week was it 3 days ago?",
+      "answer": "Tuesday",
+      "kind": "WORD",
+      "accept": [
+        "Tue",
+        "Tues"
+      ],
+      "hint": "Count backwards one day at a time.",
+      "solution": "1 day ago: Thursday. 2 days ago: Wednesday. 3 days ago: Tuesday."
+    },
+    {
+      "id": "g4f-s05-q05",
+      "topic": "NUMBER",
+      "skill": "Place value",
+      "difficulty": 1,
+      "prompt": "How many tens are in 3,450?",
+      "answer": "345",
+      "unit": "tens",
+      "hint": "Think of 3,450 as a stack of ten-dollar bills.",
+      "solution": "3,450 ÷ 10 = 345, so there are 345 tens in 3,450."
+    },
+    {
+      "id": "g4f-s05-q06",
+      "topic": "GEOMETRY",
+      "skill": "Elapsed time",
+      "difficulty": 2,
+      "prompt": "A movie ended at 4:10 PM. It was 95 minutes long. At what time did the movie start?",
+      "answer": "2:35 PM",
+      "kind": "WORD",
+      "accept": [
+        "2:35",
+        "2:35pm"
+      ],
+      "hint": "95 minutes is 1 hour and 35 minutes. Count backwards.",
+      "solution": "95 minutes = 1 hour 35 minutes. 4:10 PM − 1 hour = 3:10 PM. 3:10 PM − 35 minutes = 2:35 PM."
+    },
+    {
+      "id": "g4f-s05-q07",
+      "topic": "ALGEBRA",
+      "skill": "Sum and difference",
+      "difficulty": 2,
+      "prompt": "A pumpkin and a gourd cost $11 together. The pumpkin costs $5 more than the gourd. How much does the pumpkin cost?",
+      "answer": "8",
+      "unitBefore": "$",
+      "hint": "If the pumpkin cost the same as the gourd, how much would they cost together?",
+      "solution": "Take away the extra $5: 11 − 5 = $6 for two gourd-sized prices, so the gourd costs $3. The pumpkin costs 3 + 5 = $8."
+    },
+    {
+      "id": "g4f-s05-q08",
+      "topic": "LOGIC",
+      "skill": "Counting routes",
+      "difficulty": 2,
+      "prompt": "There are 3 roads from Town A to Town B and 4 roads from Town B to Town C. How many different ways can you drive from Town A to Town C, going through Town B?",
+      "answer": "12",
+      "unit": "ways",
+      "hint": "Each road from A to B can be followed by any road from B to C.",
+      "solution": "3 choices for the first part × 4 choices for the second part = 12 ways."
+    },
+    {
+      "id": "g4f-s05-q09",
+      "topic": "NUMBER",
+      "skill": "Building numbers",
+      "difficulty": 2,
+      "prompt": "What is the smallest 4-digit number whose digits are all different?",
+      "answer": "1023",
+      "hint": "The first digit can't be 0. Make every digit as small as you can, from left to right.",
+      "solution": "The thousands digit must be at least 1. Then use 0, 2 and 3 for the other places: 1,023."
+    },
+    {
+      "id": "g4f-s05-q10",
+      "topic": "GEOMETRY",
+      "skill": "Solid shapes",
+      "difficulty": 2,
+      "prompt": "Jin makes the frame of a cube out of wire. Each edge of the cube is 5 cm long. How many centimeters of wire does he use?",
+      "answer": "60",
+      "unit": "cm",
+      "hint": "How many edges does a cube have?",
+      "solution": "A cube has 12 edges: 4 on top, 4 on the bottom and 4 going up the sides. 12 × 5 = 60 cm."
+    },
+    {
+      "id": "g4f-s05-q11",
+      "topic": "ALGEBRA",
+      "skill": "Missing number",
+      "difficulty": 2,
+      "prompt": "What number goes in the box?\n3 × □ + 8 = 50",
+      "answer": "14",
+      "hint": "First find what 3 × □ must be.",
+      "solution": "3 × □ = 50 − 8 = 42. So □ = 42 ÷ 3 = 14."
+    },
+    {
+      "id": "g4f-s05-q12",
+      "topic": "LOGIC",
+      "skill": "Averages",
+      "difficulty": 2,
+      "prompt": "Noah's scores on four spelling tests were 85, 90, 75 and 90. What was his average (mean) score?",
+      "answer": "85",
+      "hint": "Add the scores, then divide by the number of tests.",
+      "solution": "85 + 90 + 75 + 90 = 340. 340 ÷ 4 = 85."
+    },
+    {
+      "id": "g4f-s05-q13",
+      "topic": "NUMBER",
+      "skill": "Fraction of a group",
+      "difficulty": 2,
+      "prompt": "A class has 45 students. Two-thirds of them walk to school. How many students walk to school?",
+      "answer": "30",
+      "unit": "students",
+      "hint": "First find one-third of 45.",
+      "solution": "One-third of 45 is 45 ÷ 3 = 15. Two-thirds is 2 × 15 = 30 students."
+    },
+    {
+      "id": "g4f-s05-q14",
+      "topic": "GEOMETRY",
+      "skill": "Counting rectangles",
+      "difficulty": 2,
+      "prompt": "How many rectangles of any size are in this strip of 4 squares? (Squares count as rectangles too.)",
+      "answer": "10",
+      "unit": "rectangles",
+      "hint": "Count rectangles that are 1 square long, then 2 squares long, then 3, then 4.",
+      "solution": "1 square long: 4. 2 long: 3. 3 long: 2. 4 long: 1. Total: 4 + 3 + 2 + 1 = 10.",
+      "figure": {
+        "type": "grid",
+        "rows": 1,
+        "cols": 4
+      }
+    },
+    {
+      "id": "g4f-s05-q15",
+      "topic": "LOGIC",
+      "skill": "Venn diagrams",
+      "difficulty": 2,
+      "prompt": "There are 20 kids in a club. Every kid likes soccer or basketball or both. 13 kids like soccer and 11 kids like basketball. How many kids like both?",
+      "answer": "4",
+      "unit": "kids",
+      "hint": "13 + 11 counts some kids twice.",
+      "solution": "13 + 11 = 24, but there are only 20 kids. The kids who like both were counted twice, so 24 − 20 = 4 kids like both.",
+      "figure": {
+        "type": "venn",
+        "leftLabel": "Soccer 13",
+        "rightLabel": "Basketball 11",
+        "both": "?"
+      }
+    },
+    {
+      "id": "g4f-s05-q16",
+      "topic": "ALGEBRA",
+      "skill": "Heads and legs",
+      "difficulty": 3,
+      "prompt": "Spiders have 8 legs and beetles have 6 legs. A science box holds 10 bugs with 68 legs in all. How many spiders are in the box?",
+      "answer": "4",
+      "unit": "spiders",
+      "hint": "Pretend all 10 bugs are beetles. How many legs would that be?",
+      "solution": "10 beetles would have 60 legs. There are 68 − 60 = 8 extra legs. Each spider has 2 more legs than a beetle, so 8 ÷ 2 = 4 spiders."
+    },
+    {
+      "id": "g4f-s05-q17",
+      "topic": "NUMBER",
+      "skill": "Counting numbers",
+      "difficulty": 3,
+      "prompt": "How many 2-digit numbers have a tens digit that is greater than the ones digit? (For example, 31 counts but 13 and 33 do not.)",
+      "answer": "45",
+      "unit": "numbers",
+      "hint": "If the tens digit is 1, the ones digit can only be 0. If the tens digit is 2, how many choices?",
+      "solution": "Tens digit 1: 1 number (10). Tens digit 2: 2 numbers (20, 21). … Tens digit 9: 9 numbers. 1 + 2 + 3 + … + 9 = 45."
+    },
+    {
+      "id": "g4f-s05-q18",
+      "topic": "GEOMETRY",
+      "skill": "Squares inside squares",
+      "difficulty": 3,
+      "prompt": "A big square is cut into 4 equal smaller squares, 2 across and 2 down. The perimeter of one small square is 20 cm. What is the perimeter of the big square?",
+      "answer": "40",
+      "unit": "cm",
+      "hint": "First find the side of a small square.",
+      "solution": "Small square side: 20 ÷ 4 = 5 cm. The big square's side is 2 small sides: 10 cm. Big perimeter: 4 × 10 = 40 cm.",
+      "figure": {
+        "type": "grid",
+        "rows": 2,
+        "cols": 2
+      }
+    },
+    {
+      "id": "g4f-s05-q19",
+      "topic": "LOGIC",
+      "skill": "Lockers",
+      "difficulty": 3,
+      "prompt": "A hallway has 10 closed lockers numbered 1 to 10. Student 1 opens every locker. Student 2 changes every 2nd locker (opens it if closed, closes it if open). Student 3 changes every 3rd locker, and so on, until Student 10 changes locker 10. How many lockers are open at the end?",
+      "answer": "3",
+      "unit": "lockers",
+      "hint": "A locker ends up open if it is changed an odd number of times. How many factors does each locker number have?",
+      "solution": "Locker n is changed once for each factor of n. Only numbers with an odd number of factors stay open: 1, 4 and 9 (they are square numbers). So 3 lockers are open."
+    },
+    {
+      "id": "g4f-s05-q20",
+      "topic": "ALGEBRA",
+      "skill": "Sum and difference",
+      "difficulty": 3,
+      "prompt": "The sum of two numbers is 50. Their difference is 14. What is the product of the two numbers?",
+      "answer": "576",
+      "hint": "Find the two numbers first. Take away the difference, then split the rest in half.",
+      "solution": "50 − 14 = 36, and half of 36 is 18, the smaller number. The larger is 18 + 14 = 32. Product: 32 × 18 = 576."
+    }
+  ]
+}

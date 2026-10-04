@@ -1,0 +1,266 @@
+{
+  "id": "g4f-s04",
+  "title": "Practice Test 4",
+  "questions": [
+    {
+      "id": "g4f-s04-q01",
+      "topic": "NUMBER",
+      "skill": "Smart adding",
+      "difficulty": 1,
+      "prompt": "What is 48 + 37 + 52 + 63?",
+      "answer": "200",
+      "hint": "Look for pairs that make 100.",
+      "solution": "48 + 52 = 100 and 37 + 63 = 100. 100 + 100 = 200."
+    },
+    {
+      "id": "g4f-s04-q02",
+      "topic": "GEOMETRY",
+      "skill": "Shapes",
+      "difficulty": 1,
+      "prompt": "How many sides do 3 triangles and 2 squares have in all?",
+      "answer": "17",
+      "unit": "sides",
+      "hint": "A triangle has 3 sides. A square has 4 sides.",
+      "solution": "3 triangles: 3 × 3 = 9 sides. 2 squares: 2 × 4 = 8 sides. 9 + 8 = 17 sides."
+    },
+    {
+      "id": "g4f-s04-q03",
+      "topic": "ALGEBRA",
+      "skill": "Missing number",
+      "difficulty": 1,
+      "prompt": "What number makes this true?\n64 − ___ = 27",
+      "answer": "37",
+      "hint": "What do you add to 27 to get 64?",
+      "solution": "64 − 27 = 37, so the missing number is 37. Check: 64 − 37 = 27. ✓"
+    },
+    {
+      "id": "g4f-s04-q04",
+      "topic": "LOGIC",
+      "skill": "Reading data",
+      "difficulty": 1,
+      "prompt": "In a class vote, 9 kids chose pumpkin pie, 7 kids chose apple pie and 4 kids chose pecan pie. How many more kids chose pumpkin pie than pecan pie?",
+      "answer": "5",
+      "unit": "kids",
+      "hint": "Compare the two numbers you need. Ignore apple pie.",
+      "solution": "9 − 4 = 5 more kids chose pumpkin pie."
+    },
+    {
+      "id": "g4f-s04-q05",
+      "topic": "NUMBER",
+      "skill": "Smart multiplying",
+      "difficulty": 1,
+      "prompt": "What is 6 × 7 × 5?",
+      "answer": "210",
+      "hint": "You can multiply in any order. Try 6 × 5 first.",
+      "solution": "6 × 5 = 30. Then 30 × 7 = 210."
+    },
+    {
+      "id": "g4f-s04-q06",
+      "topic": "GEOMETRY",
+      "skill": "Perimeter",
+      "difficulty": 2,
+      "prompt": "A rectangular corn maze is 120 meters long and 80 meters wide. Ana walks once all the way around the outside edge. How many meters does she walk?",
+      "answer": "400",
+      "unit": "meters",
+      "hint": "Add two lengths and two widths.",
+      "solution": "120 + 80 = 200 meters for one length and one width. Twice that is 400 meters."
+    },
+    {
+      "id": "g4f-s04-q07",
+      "topic": "ALGEBRA",
+      "skill": "Football points",
+      "difficulty": 2,
+      "prompt": "In football, a touchdown with an extra point is worth 7 points and a field goal is worth 3 points. The Hawks scored 4 touchdowns with extra points, plus some field goals. They scored 37 points in all. How many field goals did they score?",
+      "answer": "3",
+      "unit": "field goals",
+      "hint": "How many points came from the touchdowns?",
+      "solution": "Touchdowns: 4 × 7 = 28 points. Field goals: 37 − 28 = 9 points. 9 ÷ 3 = 3 field goals."
+    },
+    {
+      "id": "g4f-s04-q08",
+      "topic": "LOGIC",
+      "skill": "Probability",
+      "difficulty": 2,
+      "prompt": "A bag has 4 red marbles and 6 blue marbles. Lucy picks one marble without looking. What is the probability that she picks a red marble? Write it as a fraction in lowest terms.",
+      "answer": "2/5",
+      "hint": "Probability = (number of red marbles) ÷ (number of marbles in all).",
+      "solution": "There are 4 + 6 = 10 marbles and 4 are red, so the probability is 4/10. In lowest terms, 4/10 = 2/5."
+    },
+    {
+      "id": "g4f-s04-q09",
+      "topic": "NUMBER",
+      "skill": "Common factors",
+      "difficulty": 2,
+      "prompt": "Mr. Lee has 24 pencils and 36 erasers. He wants to make gift bags that are all exactly the same, using every pencil and every eraser. What is the greatest number of gift bags he can make?",
+      "answer": "12",
+      "unit": "gift bags",
+      "hint": "The number of bags must divide both 24 and 36.",
+      "solution": "Numbers that divide both 24 and 36: 1, 2, 3, 4, 6, 12. The greatest is 12. Each bag gets 2 pencils and 3 erasers."
+    },
+    {
+      "id": "g4f-s04-q10",
+      "topic": "GEOMETRY",
+      "skill": "Angles on a clock",
+      "difficulty": 2,
+      "prompt": "At exactly 5:00, what is the smaller angle between the hour hand and the minute hand of a clock, in degrees?",
+      "answer": "150",
+      "unit": "degrees",
+      "hint": "The angle between two numbers next to each other on a clock is 30 degrees.",
+      "solution": "At 5:00 the minute hand points at 12 and the hour hand at 5. That is 5 spaces apart, and each space is 30 degrees: 5 × 30 = 150 degrees.",
+      "figure": {
+        "type": "clock",
+        "hour": 5,
+        "minute": 0
+      }
+    },
+    {
+      "id": "g4f-s04-q11",
+      "topic": "ALGEBRA",
+      "skill": "Repeating patterns",
+      "difficulty": 2,
+      "prompt": "Kim writes the word FALL over and over without spaces: FALLFALLFALL… What is the 50th letter she writes?",
+      "answer": "A",
+      "kind": "WORD",
+      "hint": "The pattern repeats every 4 letters.",
+      "solution": "50 ÷ 4 = 12 remainder 2. After 12 full FALLs (48 letters), the 49th letter is F and the 50th is A."
+    },
+    {
+      "id": "g4f-s04-q12",
+      "topic": "LOGIC",
+      "skill": "Arrangements",
+      "difficulty": 2,
+      "prompt": "Four runners are in a race. In how many different ways can the gold, silver and bronze medals be given out? (No ties.)",
+      "answer": "24",
+      "unit": "ways",
+      "hint": "How many runners could win gold? Then how many are left for silver?",
+      "solution": "Gold: 4 choices. Silver: 3 choices left. Bronze: 2 choices left. 4 × 3 × 2 = 24 ways."
+    },
+    {
+      "id": "g4f-s04-q13",
+      "topic": "NUMBER",
+      "skill": "Fractions",
+      "difficulty": 2,
+      "prompt": "Owen ate 2/8 of a pizza and Mia ate 3/8 of the same pizza. What fraction of the pizza is left?",
+      "answer": "3/8",
+      "hint": "The whole pizza is 8/8.",
+      "solution": "They ate 2/8 + 3/8 = 5/8 of the pizza. Left over: 8/8 − 5/8 = 3/8."
+    },
+    {
+      "id": "g4f-s04-q14",
+      "topic": "GEOMETRY",
+      "skill": "Tiling",
+      "difficulty": 2,
+      "prompt": "How many square tiles that are 2 feet on each side are needed to cover a floor that is 10 feet long and 8 feet wide?",
+      "answer": "20",
+      "unit": "tiles",
+      "hint": "How many tiles fit along the length? Along the width?",
+      "solution": "Along the 10-foot side: 10 ÷ 2 = 5 tiles. Along the 8-foot side: 8 ÷ 2 = 4 tiles. 5 × 4 = 20 tiles."
+    },
+    {
+      "id": "g4f-s04-q15",
+      "topic": "ALGEBRA",
+      "skill": "Catching up",
+      "difficulty": 2,
+      "prompt": "Ella has $10 and saves $5 more every week. Her brother has $30 and saves $3 more every week. After how many weeks will they have the same amount of money?",
+      "answer": "10",
+      "unit": "weeks",
+      "hint": "Each week, Ella catches up by $5 − $3.",
+      "solution": "Ella starts $20 behind. Each week she catches up by 5 − 3 = $2. 20 ÷ 2 = 10 weeks. Check: Ella 10 + 50 = $60 and her brother 30 + 30 = $60. ✓"
+    },
+    {
+      "id": "g4f-s04-q16",
+      "topic": "LOGIC",
+      "skill": "Truth and lies",
+      "difficulty": 3,
+      "prompt": "Someone ate the last cookie. Alex says, \"I ate it.\" Bree says, \"Alex did not eat it.\" Cole says, \"I did not eat it.\" Exactly one of the three kids is telling the truth. Who ate the cookie?",
+      "answer": "Cole",
+      "kind": "WORD",
+      "hint": "Try each kid as the cookie eater and count how many statements are true.",
+      "solution": "If Alex ate it, Alex and Cole tell the truth (2 true). If Bree ate it, Bree and Cole tell the truth (2 true). If Cole ate it, only Bree tells the truth (1 true). So Cole ate it."
+    },
+    {
+      "id": "g4f-s04-q17",
+      "topic": "NUMBER",
+      "skill": "Counting multiples",
+      "difficulty": 3,
+      "prompt": "How many whole numbers from 1 to 100 are multiples of 3 or multiples of 5 (or both)?",
+      "answer": "47",
+      "unit": "numbers",
+      "hint": "Count the multiples of 3, count the multiples of 5, then think about numbers you counted twice.",
+      "solution": "Multiples of 3: 33. Multiples of 5: 20. Multiples of both (multiples of 15): 15, 30, 45, 60, 75, 90, which is 6, and they were counted twice. 33 + 20 − 6 = 47."
+    },
+    {
+      "id": "g4f-s04-q18",
+      "topic": "GEOMETRY",
+      "skill": "Perimeter puzzles",
+      "difficulty": 3,
+      "prompt": "A rectangle is 12 cm long and 8 cm wide. A 4 cm by 4 cm square is cut out of one corner, as shown. What is the perimeter of the new shape?",
+      "answer": "40",
+      "unit": "cm",
+      "hint": "Slide the two short sides of the cut-out back out to the corner. What happens to the distance around?",
+      "solution": "The two new sides (4 cm and 4 cm) are exactly as long as the two pieces of the old edge that were removed. So the perimeter stays the same as the rectangle: 12 + 8 + 12 + 8 = 40 cm.",
+      "figure": {
+        "type": "shape",
+        "points": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 12,
+            "y": 0
+          },
+          {
+            "x": 12,
+            "y": 4
+          },
+          {
+            "x": 8,
+            "y": 4
+          },
+          {
+            "x": 8,
+            "y": 8
+          },
+          {
+            "x": 0,
+            "y": 8
+          }
+        ],
+        "sideLabels": {
+          "0": "12 cm",
+          "2": "4 cm",
+          "3": "4 cm",
+          "5": "8 cm"
+        }
+      }
+    },
+    {
+      "id": "g4f-s04-q19",
+      "topic": "ALGEBRA",
+      "skill": "Growing patterns",
+      "difficulty": 3,
+      "prompt": "Toothpicks are used to make squares in a row. 1 square uses 4 toothpicks, 2 squares use 7 toothpicks, and 3 squares use 10 toothpicks. How many toothpicks are needed to make 25 squares in a row?",
+      "answer": "76",
+      "unit": "toothpicks",
+      "hint": "Each new square needs only 3 more toothpicks, because it shares a side.",
+      "solution": "The first square needs 4 toothpicks. Each of the other 24 squares adds 3 more. 4 + 24 × 3 = 4 + 72 = 76 toothpicks.",
+      "figure": {
+        "type": "grid",
+        "rows": 1,
+        "cols": 3
+      }
+    },
+    {
+      "id": "g4f-s04-q20",
+      "topic": "LOGIC",
+      "skill": "Scheduling",
+      "difficulty": 3,
+      "prompt": "A pan can cook 2 pancakes at a time. Each side of a pancake takes 1 minute to cook. What is the fewest number of minutes needed to cook both sides of 3 pancakes?",
+      "answer": "3",
+      "unit": "minutes",
+      "hint": "The pan should never have an empty spot. Try flipping only one of the two pancakes after the first minute.",
+      "solution": "Call the pancakes A, B, C. Minute 1: A side 1, B side 1. Minute 2: A side 2, C side 1. Minute 3: B side 2, C side 2. All 6 sides are cooked in 3 minutes, and it can't be faster because the pan cooks only 2 sides per minute."
+    }
+  ]
+}
