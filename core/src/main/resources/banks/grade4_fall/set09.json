@@ -1,0 +1,236 @@
+{
+  "id": "g4f-s09",
+  "title": "Practice Test 9",
+  "questions": [
+    {
+      "id": "g4f-s09-q01",
+      "topic": "NUMBER",
+      "skill": "Addition",
+      "difficulty": 1,
+      "prompt": "What is 1,234 + 4,321?",
+      "answer": "5555",
+      "hint": "Add place by place. Do you need to regroup?",
+      "solution": "Ones: 4 + 1 = 5. Tens: 3 + 2 = 5. Hundreds: 2 + 3 = 5. Thousands: 1 + 4 = 5. The sum is 5,555."
+    },
+    {
+      "id": "g4f-s09-q02",
+      "topic": "ALGEBRA",
+      "skill": "Missing number",
+      "difficulty": 1,
+      "prompt": "What number makes this true?\n45 ÷ ___ = 9",
+      "answer": "5",
+      "hint": "9 times what number is 45?",
+      "solution": "9 × 5 = 45, so 45 ÷ 5 = 9. The missing number is 5."
+    },
+    {
+      "id": "g4f-s09-q03",
+      "topic": "GEOMETRY",
+      "skill": "Units of time",
+      "difficulty": 1,
+      "prompt": "How many hours are in 2 days?",
+      "answer": "48",
+      "unit": "hours",
+      "hint": "One day has 24 hours.",
+      "solution": "2 × 24 = 48 hours."
+    },
+    {
+      "id": "g4f-s09-q04",
+      "topic": "LOGIC",
+      "skill": "Ordering",
+      "difficulty": 1,
+      "prompt": "Ivy is older than Jo. Jo is older than Kai. Kai is older than Lu. Who is the second oldest?",
+      "answer": "Jo",
+      "kind": "WORD",
+      "hint": "Line them up from oldest to youngest.",
+      "solution": "Oldest to youngest: Ivy, Jo, Kai, Lu. Jo is second oldest."
+    },
+    {
+      "id": "g4f-s09-q05",
+      "topic": "NUMBER",
+      "skill": "Division",
+      "difficulty": 1,
+      "prompt": "What is 1,000 ÷ 8?",
+      "answer": "125",
+      "hint": "Half of 1,000 is 500. Keep halving.",
+      "solution": "1,000 ÷ 2 = 500, 500 ÷ 2 = 250, 250 ÷ 2 = 125. Halving 3 times is the same as dividing by 8, so the answer is 125."
+    },
+    {
+      "id": "g4f-s09-q06",
+      "topic": "GEOMETRY",
+      "skill": "Perimeter",
+      "difficulty": 2,
+      "prompt": "A square and a rectangle have the same perimeter. The rectangle is 10 cm long and 6 cm wide. How long is each side of the square?",
+      "answer": "8",
+      "unit": "cm",
+      "hint": "Find the perimeter of the rectangle first.",
+      "solution": "Rectangle perimeter: 10 + 6 + 10 + 6 = 32 cm. The square has 4 equal sides: 32 ÷ 4 = 8 cm."
+    },
+    {
+      "id": "g4f-s09-q07",
+      "topic": "ALGEBRA",
+      "skill": "Growing patterns",
+      "difficulty": 2,
+      "prompt": "What number comes next in this pattern?\n1, 2, 4, 7, 11, 16, ___",
+      "answer": "22",
+      "hint": "Look at how much is added each time: +1, +2, +3, …",
+      "solution": "The pattern adds 1, then 2, then 3, then 4, then 5. Next it adds 6: 16 + 6 = 22."
+    },
+    {
+      "id": "g4f-s09-q08",
+      "topic": "LOGIC",
+      "skill": "Bar graphs",
+      "difficulty": 2,
+      "prompt": "The bar graph shows how many kids chose each Halloween costume. What fraction of the kids chose the ghost costume? Write it in lowest terms.",
+      "answer": "1/3",
+      "hint": "First find how many kids voted in all.",
+      "solution": "Total votes: 8 + 12 + 6 + 10 = 36. Ghost got 12 of the 36 votes: 12/36 = 1/3.",
+      "figure": {
+        "type": "bars",
+        "title": "Costume votes",
+        "labels": [
+          "Witch",
+          "Ghost",
+          "Pirate",
+          "Robot"
+        ],
+        "values": [
+          8,
+          12,
+          6,
+          10
+        ],
+        "step": 2
+      }
+    },
+    {
+      "id": "g4f-s09-q09",
+      "topic": "NUMBER",
+      "skill": "Multiples",
+      "difficulty": 2,
+      "prompt": "What is the smallest number you can add to 247 to get a multiple of 6?",
+      "answer": "5",
+      "hint": "Find the multiple of 6 just above 247.",
+      "solution": "6 × 41 = 246, which is less than 247. The next multiple is 6 × 42 = 252. 252 − 247 = 5."
+    },
+    {
+      "id": "g4f-s09-q10",
+      "topic": "GEOMETRY",
+      "skill": "Units of time",
+      "difficulty": 2,
+      "prompt": "How many seconds are in a quarter of an hour?",
+      "answer": "900",
+      "unit": "seconds",
+      "hint": "A quarter of an hour is 15 minutes.",
+      "solution": "15 minutes × 60 seconds = 900 seconds."
+    },
+    {
+      "id": "g4f-s09-q11",
+      "topic": "ALGEBRA",
+      "skill": "Growing by steps",
+      "difficulty": 2,
+      "prompt": "A sunflower is 10 cm tall on Day 1. It grows 3 cm every day. On which day will it be 40 cm tall?",
+      "answer": "11",
+      "hint": "How many cm does it need to grow? How many days does that take?",
+      "solution": "It needs to grow 40 − 10 = 30 cm, which takes 30 ÷ 3 = 10 more days. Day 1 + 10 days = Day 11."
+    },
+    {
+      "id": "g4f-s09-q12",
+      "topic": "LOGIC",
+      "skill": "Counting choices",
+      "difficulty": 2,
+      "prompt": "A café has 3 kinds of soup and 4 kinds of sandwiches. A lunch can be one soup, one sandwich, or one soup with one sandwich. How many different lunches are possible?",
+      "answer": "19",
+      "unit": "lunches",
+      "hint": "Count the three kinds of lunches separately, then add.",
+      "solution": "Soup only: 3. Sandwich only: 4. Soup and sandwich: 3 × 4 = 12. Total: 3 + 4 + 12 = 19 lunches."
+    },
+    {
+      "id": "g4f-s09-q13",
+      "topic": "NUMBER",
+      "skill": "Decimals and money",
+      "difficulty": 2,
+      "prompt": "Leo has $3.45. Mia has $2.80. How much more money does Leo have than Mia?",
+      "answer": "0.65",
+      "unitBefore": "$",
+      "hint": "Subtract: 3.45 − 2.80. Line up the decimal points.",
+      "solution": "$3.45 − $2.80 = $0.65. (Count up: $2.80 + $0.20 = $3.00, and $3.00 + $0.45 = $3.45, so the difference is $0.65.)"
+    },
+    {
+      "id": "g4f-s09-q14",
+      "topic": "GEOMETRY",
+      "skill": "Angles",
+      "difficulty": 2,
+      "prompt": "A round pizza is cut into 8 equal slices from the center. How many degrees is the angle at the point of each slice?",
+      "answer": "45",
+      "unit": "degrees",
+      "hint": "All the slices together make a full turn around the center.",
+      "solution": "A full turn is 360 degrees. 360 ÷ 8 = 45 degrees."
+    },
+    {
+      "id": "g4f-s09-q15",
+      "topic": "LOGIC",
+      "skill": "Dice sums",
+      "difficulty": 2,
+      "prompt": "Two number cubes, each numbered 1 to 6, are rolled, one red and one blue. In how many different ways can the two numbers add up to 7?",
+      "answer": "6",
+      "unit": "ways",
+      "hint": "List the red number and the blue number: 1 and 6, 2 and 5, …",
+      "solution": "Red-blue pairs: 1-6, 2-5, 3-4, 4-3, 5-2, 6-1. That is 6 ways."
+    },
+    {
+      "id": "g4f-s09-q16",
+      "topic": "ALGEBRA",
+      "skill": "Working backwards",
+      "difficulty": 3,
+      "prompt": "A farmer had a pile of pumpkins. In the morning he sold half of them plus 2 more. In the afternoon he sold half of what was left plus 2 more. He had 4 pumpkins left. How many pumpkins did he start with?",
+      "answer": "28",
+      "unit": "pumpkins",
+      "hint": "Undo the afternoon first: before selling the extra 2, he had 4 + 2.",
+      "solution": "Afternoon: 4 + 2 = 6 is half of what he had, so he had 12 at noon. Morning: 12 + 2 = 14 is half of what he started with, so he started with 28. Check: sell 14 + 2 = 16, leaving 12; sell 6 + 2 = 8, leaving 4. ✓"
+    },
+    {
+      "id": "g4f-s09-q17",
+      "topic": "NUMBER",
+      "skill": "Counting digits",
+      "difficulty": 3,
+      "prompt": "Ruby writes all the whole numbers from 1 to 50. How many times does she write the digit 3?",
+      "answer": "15",
+      "unit": "times",
+      "hint": "Count 3s in the ones place and 3s in the tens place separately.",
+      "solution": "Ones place: 3, 13, 23, 33, 43, which is 5 times. Tens place: 30 to 39, which is 10 times. Total: 5 + 10 = 15 times (33 has two 3s)."
+    },
+    {
+      "id": "g4f-s09-q18",
+      "topic": "GEOMETRY",
+      "skill": "Cutting into squares",
+      "difficulty": 3,
+      "prompt": "A rectangle of paper is 12 inches by 8 inches. Kai cuts it into squares that are all the same size, with no paper left over. He uses the largest squares possible. How many squares does he get?",
+      "answer": "6",
+      "unit": "squares",
+      "hint": "The side of each square must divide both 12 and 8.",
+      "solution": "The largest number that divides both 12 and 8 is 4, so each square is 4 by 4. Along the 12-inch side: 3 squares. Along the 8-inch side: 2 squares. 3 × 2 = 6 squares."
+    },
+    {
+      "id": "g4f-s09-q19",
+      "topic": "LOGIC",
+      "skill": "Arrangements",
+      "difficulty": 3,
+      "prompt": "Five kids line up for a photo. Ana and Ben want to stand next to each other. How many different ways can the five kids line up?",
+      "answer": "48",
+      "unit": "ways",
+      "hint": "Glue Ana and Ben together into one block. Then remember the block can be Ana-Ben or Ben-Ana.",
+      "solution": "Treat Ana and Ben as one block. Now there are 4 things to line up: 4 × 3 × 2 × 1 = 24 ways. Inside the block they can stand Ana-Ben or Ben-Ana, so 24 × 2 = 48 ways."
+    },
+    {
+      "id": "g4f-s09-q20",
+      "topic": "ALGEBRA",
+      "skill": "Meeting in the middle",
+      "difficulty": 3,
+      "prompt": "Ann and Bob are 40 blocks apart. They walk toward each other at the same time. Ann walks 3 blocks per minute and Bob walks 5 blocks per minute. After how many minutes will they meet?",
+      "answer": "5",
+      "unit": "minutes",
+      "hint": "How much closer do they get each minute?",
+      "solution": "Each minute they get 3 + 5 = 8 blocks closer. 40 ÷ 8 = 5 minutes."
+    }
+  ]
+}

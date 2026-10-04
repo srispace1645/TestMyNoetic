@@ -1,0 +1,270 @@
+{
+  "id": "g4f-s08",
+  "title": "Practice Test 8",
+  "questions": [
+    {
+      "id": "g4f-s08-q01",
+      "topic": "NUMBER",
+      "skill": "Smart multiplying",
+      "difficulty": 1,
+      "prompt": "What is 15 × 4 × 25?",
+      "answer": "1500",
+      "hint": "Multiply 4 × 25 first.",
+      "solution": "4 × 25 = 100. Then 15 × 100 = 1,500."
+    },
+    {
+      "id": "g4f-s08-q02",
+      "topic": "GEOMETRY",
+      "skill": "Units: gallons and quarts",
+      "difficulty": 1,
+      "prompt": "How many quarts of apple cider are in 3 gallons? (1 gallon = 4 quarts)",
+      "answer": "12",
+      "unit": "quarts",
+      "hint": "Each gallon is 4 quarts.",
+      "solution": "3 × 4 = 12 quarts."
+    },
+    {
+      "id": "g4f-s08-q03",
+      "topic": "ALGEBRA",
+      "skill": "Missing term",
+      "difficulty": 1,
+      "prompt": "What number is missing from this pattern?\n5, 11, 17, ___, 29",
+      "answer": "23",
+      "hint": "How much is added each time?",
+      "solution": "The pattern adds 6 each time. 17 + 6 = 23, and 23 + 6 = 29. ✓"
+    },
+    {
+      "id": "g4f-s08-q04",
+      "topic": "LOGIC",
+      "skill": "Calendar",
+      "difficulty": 1,
+      "prompt": "Today is Wednesday. What day of the week will it be 14 days from today?",
+      "answer": "Wednesday",
+      "kind": "WORD",
+      "accept": [
+        "Wed"
+      ],
+      "hint": "How many weeks is 14 days?",
+      "solution": "14 days is exactly 2 weeks, so it will be Wednesday again."
+    },
+    {
+      "id": "g4f-s08-q05",
+      "topic": "NUMBER",
+      "skill": "Building numbers",
+      "difficulty": 1,
+      "prompt": "What is the largest 3-digit odd number whose digits are all different?",
+      "answer": "987",
+      "hint": "Make the hundreds and tens digits as big as you can. The ones digit must be odd.",
+      "solution": "Start with 9 in the hundreds place and 8 in the tens place. The largest odd digit left for the ones place is 7. The answer is 987."
+    },
+    {
+      "id": "g4f-s08-q06",
+      "topic": "GEOMETRY",
+      "skill": "Perimeter",
+      "difficulty": 2,
+      "prompt": "A rectangle is 3 times as long as it is wide. Its width is 6 cm. What is its perimeter?",
+      "answer": "48",
+      "unit": "cm",
+      "hint": "Find the length first.",
+      "solution": "Length = 3 × 6 = 18 cm. Perimeter = 18 + 6 + 18 + 6 = 48 cm."
+    },
+    {
+      "id": "g4f-s08-q07",
+      "topic": "ALGEBRA",
+      "skill": "Two kinds of tickets",
+      "difficulty": 2,
+      "prompt": "At the fall fair, adult tickets cost $5 and kid tickets cost $3. A family bought 7 tickets for $27 in all. How many adult tickets did they buy?",
+      "answer": "3",
+      "unit": "adult tickets",
+      "hint": "Pretend all 7 tickets were kid tickets. How much would that cost?",
+      "solution": "7 kid tickets would cost 7 × $3 = $21. The family paid $27 − $21 = $6 more. Each adult ticket costs $2 more than a kid ticket, so there were 6 ÷ 2 = 3 adult tickets."
+    },
+    {
+      "id": "g4f-s08-q08",
+      "topic": "LOGIC",
+      "skill": "Probability",
+      "difficulty": 2,
+      "prompt": "Max rolls a number cube with the numbers 1 to 6. What is the probability that he rolls a number greater than 4? Write it as a fraction in lowest terms.",
+      "answer": "1/3",
+      "hint": "Which numbers are greater than 4?",
+      "solution": "Only 5 and 6 are greater than 4. That's 2 out of 6 numbers: 2/6 = 1/3."
+    },
+    {
+      "id": "g4f-s08-q09",
+      "topic": "NUMBER",
+      "skill": "Counting factors",
+      "difficulty": 2,
+      "prompt": "How many factors does 36 have? (Count 1 and 36 too.)",
+      "answer": "9",
+      "unit": "factors",
+      "hint": "List factor pairs: 1 × 36, 2 × 18, …",
+      "solution": "Factor pairs: 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6. The factors are 1, 2, 3, 4, 6, 9, 12, 18 and 36. That is 9 factors (6 is only counted once)."
+    },
+    {
+      "id": "g4f-s08-q10",
+      "topic": "GEOMETRY",
+      "skill": "Perimeter",
+      "difficulty": 2,
+      "prompt": "A soccer field is 50 meters long and 30 meters wide. Kim runs all the way around it 3 times. How many meters does she run?",
+      "answer": "480",
+      "unit": "meters",
+      "hint": "Find the distance for one trip around first.",
+      "solution": "One trip around: 50 + 30 + 50 + 30 = 160 meters. Three trips: 3 × 160 = 480 meters."
+    },
+    {
+      "id": "g4f-s08-q11",
+      "topic": "ALGEBRA",
+      "skill": "Shape equations",
+      "difficulty": 2,
+      "prompt": "Each shape stands for a number.\n● + ● + ▲ = 17\n● + ▲ + ▲ = 13\nWhat is ● + ▲?",
+      "answer": "10",
+      "hint": "Add the two lines together. How many ● and how many ▲ do you get?",
+      "solution": "Adding both lines: 3 ● and 3 ▲ make 17 + 13 = 30. So one ● and one ▲ make 30 ÷ 3 = 10."
+    },
+    {
+      "id": "g4f-s08-q12",
+      "topic": "LOGIC",
+      "skill": "Median",
+      "difficulty": 2,
+      "prompt": "What is the median of these numbers?\n12, 7, 15, 9, 20, 11, 8",
+      "answer": "11",
+      "hint": "The median is the middle number after you put them in order.",
+      "solution": "In order: 7, 8, 9, 11, 12, 15, 20. The middle (4th) number is 11."
+    },
+    {
+      "id": "g4f-s08-q13",
+      "topic": "NUMBER",
+      "skill": "Fraction of a fraction",
+      "difficulty": 2,
+      "prompt": "What is 3/4 of 2/3 of 36?",
+      "answer": "18",
+      "hint": "Find 2/3 of 36 first.",
+      "solution": "2/3 of 36: 36 ÷ 3 = 12, and 2 × 12 = 24. Then 3/4 of 24: 24 ÷ 4 = 6, and 3 × 6 = 18."
+    },
+    {
+      "id": "g4f-s08-q14",
+      "topic": "GEOMETRY",
+      "skill": "Area of a staircase",
+      "difficulty": 2,
+      "prompt": "Each step of this staircase shape is 2 cm wide and 2 cm tall. What is the area of the shape?",
+      "answer": "24",
+      "unit": "sq cm",
+      "hint": "Cut the shape into three rows.",
+      "solution": "Top row: 2 by 2 = 4 sq cm. Middle row: 4 by 2 = 8 sq cm. Bottom row: 6 by 2 = 12 sq cm. Total: 4 + 8 + 12 = 24 sq cm.",
+      "figure": {
+        "type": "shape",
+        "points": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 2,
+            "y": 0
+          },
+          {
+            "x": 2,
+            "y": 2
+          },
+          {
+            "x": 4,
+            "y": 2
+          },
+          {
+            "x": 4,
+            "y": 4
+          },
+          {
+            "x": 6,
+            "y": 4
+          },
+          {
+            "x": 6,
+            "y": 6
+          },
+          {
+            "x": 0,
+            "y": 6
+          }
+        ],
+        "sideLabels": {
+          "0": "2 cm",
+          "1": "2 cm",
+          "6": "6 cm",
+          "7": "6 cm"
+        },
+        "showGrid": true
+      }
+    },
+    {
+      "id": "g4f-s08-q15",
+      "topic": "LOGIC",
+      "skill": "Logic puzzles",
+      "difficulty": 2,
+      "prompt": "Ana, Ben, Cy and Dot stand in a row of 4 spots. Ana is in the 3rd spot. Ben is next to Ana. Cy is at one end of the row. Dot is not next to Cy. Who is in the 2nd spot?",
+      "answer": "Ben",
+      "kind": "WORD",
+      "hint": "Ben is in spot 2 or spot 4. Try both.",
+      "solution": "If Ben were in spot 4, Cy would have to be in spot 1 and Dot in spot 2, right next to Cy. That breaks a clue. So Ben is in spot 2."
+    },
+    {
+      "id": "g4f-s08-q16",
+      "topic": "ALGEBRA",
+      "skill": "Ages",
+      "difficulty": 3,
+      "prompt": "Sam, his dad and his grandpa have ages that add up to 120. Dad is 30 years older than Sam. Grandpa is 30 years older than Dad. How old is Sam?",
+      "answer": "10",
+      "unit": "years old",
+      "hint": "Grandpa is 60 years older than Sam. Take away the extra years first.",
+      "solution": "Dad has 30 extra years and Grandpa has 60 extra years compared to Sam. 120 − 30 − 60 = 30 is three times Sam's age, so Sam is 30 ÷ 3 = 10."
+    },
+    {
+      "id": "g4f-s08-q17",
+      "topic": "NUMBER",
+      "skill": "Divisibility",
+      "difficulty": 3,
+      "prompt": "The 3-digit number 4□3 is a multiple of 9. What digit goes in the box?",
+      "answer": "2",
+      "hint": "A number is a multiple of 9 when its digits add up to a multiple of 9.",
+      "solution": "The digits add up to 4 + □ + 3 = 7 + □. The only digit that makes this a multiple of 9 is 2 (7 + 2 = 9). Check: 423 = 9 × 47. ✓"
+    },
+    {
+      "id": "g4f-s08-q18",
+      "topic": "GEOMETRY",
+      "skill": "Painted cubes",
+      "difficulty": 3,
+      "prompt": "A big 3 × 3 × 3 cube is made of 27 small cubes. The outside of the big cube is painted blue. How many small cubes have blue paint on exactly one face?",
+      "answer": "6",
+      "unit": "cubes",
+      "hint": "Which small cubes touch only one outside face? Look at the middle of each face.",
+      "solution": "Only the center cube of each face has exactly one painted face. A cube has 6 faces, so 6 small cubes."
+    },
+    {
+      "id": "g4f-s08-q19",
+      "topic": "LOGIC",
+      "skill": "Counting paths",
+      "difficulty": 3,
+      "prompt": "Moving only along the lines, always going right or down, how many different paths go from the top-left corner to the bottom-right corner of this grid?",
+      "answer": "10",
+      "unit": "paths",
+      "hint": "Write the number of paths at each corner point. Each point's number is the sum of the point above it and the point to its left.",
+      "solution": "Top row of points: 1, 1, 1, 1. Middle row: 1, 2, 3, 4. Bottom row: 1, 3, 6, 10. There are 10 paths.",
+      "figure": {
+        "type": "grid",
+        "rows": 2,
+        "cols": 3
+      }
+    },
+    {
+      "id": "g4f-s08-q20",
+      "topic": "ALGEBRA",
+      "skill": "Doubling",
+      "difficulty": 3,
+      "prompt": "Mia saves $1 in the first week. Each week after that, she saves twice as much as the week before. How much has she saved in all after 8 weeks?",
+      "answer": "255",
+      "unitBefore": "$",
+      "hint": "Write down how much she saves each week: 1, 2, 4, …",
+      "solution": "Weeks 1 to 8: 1, 2, 4, 8, 16, 32, 64, 128. Total: 1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 = $255."
+    }
+  ]
+}

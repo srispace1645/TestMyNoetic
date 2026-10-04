@@ -1,0 +1,319 @@
+{
+  "id": "g4f-s10",
+  "title": "Practice Test 10",
+  "questions": [
+    {
+      "id": "g4f-s10-q01",
+      "topic": "NUMBER",
+      "skill": "Subtraction",
+      "difficulty": 1,
+      "prompt": "What is 2,026 − 26?",
+      "answer": "2000",
+      "hint": "Look at the last two digits.",
+      "solution": "2,026 − 26 = 2,000."
+    },
+    {
+      "id": "g4f-s10-q02",
+      "topic": "GEOMETRY",
+      "skill": "Units: yards, feet, inches",
+      "difficulty": 1,
+      "prompt": "How many inches are in 2 yards? (1 yard = 3 feet and 1 foot = 12 inches)",
+      "answer": "72",
+      "unit": "inches",
+      "hint": "Change yards to feet first, then feet to inches.",
+      "solution": "2 yards = 2 × 3 = 6 feet. 6 feet = 6 × 12 = 72 inches."
+    },
+    {
+      "id": "g4f-s10-q03",
+      "topic": "ALGEBRA",
+      "skill": "Number patterns",
+      "difficulty": 1,
+      "prompt": "What number comes next in this pattern?\n2, 5, 8, 11, ___",
+      "answer": "14",
+      "hint": "How much is added each time?",
+      "solution": "The pattern adds 3 each time. 11 + 3 = 14."
+    },
+    {
+      "id": "g4f-s10-q04",
+      "topic": "LOGIC",
+      "skill": "Possible results",
+      "difficulty": 1,
+      "prompt": "A coin is flipped 3 times in a row. How many different results are possible? (One result is heads, tails, heads.)",
+      "answer": "8",
+      "unit": "results",
+      "hint": "Each flip has 2 results. Multiply.",
+      "solution": "2 × 2 × 2 = 8 results: HHH, HHT, HTH, HTT, THH, THT, TTH, TTT."
+    },
+    {
+      "id": "g4f-s10-q05",
+      "topic": "NUMBER",
+      "skill": "Order of operations",
+      "difficulty": 1,
+      "prompt": "What is 6 + 4 × 5?",
+      "answer": "26",
+      "hint": "Multiply before you add.",
+      "solution": "First 4 × 5 = 20. Then 6 + 20 = 26."
+    },
+    {
+      "id": "g4f-s10-q06",
+      "topic": "GEOMETRY",
+      "skill": "Area and perimeter",
+      "difficulty": 2,
+      "prompt": "A rectangle has an area of 48 square inches and a perimeter of 28 inches. How long is its longer side?",
+      "answer": "8",
+      "unit": "inches",
+      "hint": "The length and width add up to half the perimeter. Which two numbers add to 14 and multiply to 48?",
+      "solution": "Length + width = 28 ÷ 2 = 14. Two numbers that add to 14 and multiply to 48 are 8 and 6. The longer side is 8 inches."
+    },
+    {
+      "id": "g4f-s10-q07",
+      "topic": "ALGEBRA",
+      "skill": "Sum and difference",
+      "difficulty": 2,
+      "prompt": "There are 140 kids at the school play. There are 20 more boys than girls. How many girls are at the play?",
+      "answer": "60",
+      "unit": "girls",
+      "hint": "Take away the 20 extra boys first.",
+      "solution": "140 − 20 = 120. Half of 120 is 60, so there are 60 girls (and 80 boys)."
+    },
+    {
+      "id": "g4f-s10-q08",
+      "topic": "LOGIC",
+      "skill": "Tournaments",
+      "difficulty": 2,
+      "prompt": "Eight teams play in a fall soccer tournament. The losing team of each game is out, and there are no ties. How many games are played in all to find the champion?",
+      "answer": "7",
+      "unit": "games",
+      "hint": "Every game knocks out exactly one team. How many teams must be knocked out?",
+      "solution": "All teams except the champion must lose once, so 8 − 1 = 7 teams are knocked out. That takes 7 games (4 + 2 + 1)."
+    },
+    {
+      "id": "g4f-s10-q09",
+      "topic": "NUMBER",
+      "skill": "Smart multiplying",
+      "difficulty": 2,
+      "prompt": "What is 6 × 98?",
+      "answer": "588",
+      "hint": "98 is 2 less than 100.",
+      "solution": "6 × 100 = 600. Six groups of 2 too many is 12, so 600 − 12 = 588."
+    },
+    {
+      "id": "g4f-s10-q10",
+      "topic": "GEOMETRY",
+      "skill": "Elapsed time",
+      "difficulty": 2,
+      "prompt": "Dad started driving at 10:40 PM and arrived at 1:15 AM the next morning. How many minutes did he drive?",
+      "answer": "155",
+      "unit": "minutes",
+      "hint": "Count to midnight first.",
+      "solution": "10:40 PM to 12:00 midnight is 1 hour 20 minutes = 80 minutes. Midnight to 1:15 AM is 75 minutes. 80 + 75 = 155 minutes."
+    },
+    {
+      "id": "g4f-s10-q11",
+      "topic": "ALGEBRA",
+      "skill": "Balance chains",
+      "difficulty": 2,
+      "prompt": "2 pumpkins weigh the same as 6 apples. 1 apple weighs the same as 2 plums. How many plums weigh the same as 3 pumpkins?",
+      "answer": "18",
+      "unit": "plums",
+      "hint": "How many apples does 1 pumpkin weigh?",
+      "solution": "1 pumpkin = 6 ÷ 2 = 3 apples = 3 × 2 = 6 plums. So 3 pumpkins = 3 × 6 = 18 plums."
+    },
+    {
+      "id": "g4f-s10-q12",
+      "topic": "LOGIC",
+      "skill": "Averages",
+      "difficulty": 2,
+      "prompt": "Jada's average score on her first 4 math tests was 88. What score does she need on the 5th test so that her average for all 5 tests is 90?",
+      "answer": "98",
+      "hint": "Find the total points for 4 tests, and the total needed for 5 tests.",
+      "solution": "First 4 tests: 4 × 88 = 352 points. For an average of 90 on 5 tests she needs 5 × 90 = 450 points. 450 − 352 = 98."
+    },
+    {
+      "id": "g4f-s10-q13",
+      "topic": "NUMBER",
+      "skill": "Common multiples",
+      "difficulty": 2,
+      "prompt": "Bus A leaves the station every 12 minutes. Bus B leaves every 18 minutes. Both buses leave at 8:00 AM. At what time will they next leave together?",
+      "answer": "8:36 AM",
+      "kind": "WORD",
+      "accept": [
+        "8:36",
+        "8:36am"
+      ],
+      "hint": "Find the smallest number that is a multiple of both 12 and 18.",
+      "solution": "Bus A: 12, 24, 36, … minutes. Bus B: 18, 36, … minutes. The first time both lists match is 36 minutes after 8:00 AM, which is 8:36 AM."
+    },
+    {
+      "id": "g4f-s10-q14",
+      "topic": "GEOMETRY",
+      "skill": "Perimeter",
+      "difficulty": 2,
+      "prompt": "Five squares, each with sides of 3 cm, are put together to make a plus sign as shown. What is the perimeter of the plus sign?",
+      "answer": "36",
+      "unit": "cm",
+      "hint": "Count how many square sides are on the outside edge.",
+      "solution": "Each of the 4 arms shows 3 outside sides: 4 × 3 = 12 sides. The middle square has no outside sides. 12 × 3 cm = 36 cm.",
+      "figure": {
+        "type": "shape",
+        "points": [
+          {
+            "x": 1,
+            "y": 0
+          },
+          {
+            "x": 2,
+            "y": 0
+          },
+          {
+            "x": 2,
+            "y": 1
+          },
+          {
+            "x": 3,
+            "y": 1
+          },
+          {
+            "x": 3,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 2
+          },
+          {
+            "x": 2,
+            "y": 3
+          },
+          {
+            "x": 1,
+            "y": 3
+          },
+          {
+            "x": 1,
+            "y": 2
+          },
+          {
+            "x": 0,
+            "y": 2
+          },
+          {
+            "x": 0,
+            "y": 1
+          },
+          {
+            "x": 1,
+            "y": 1
+          }
+        ],
+        "sideLabels": {
+          "0": "3 cm"
+        },
+        "showGrid": true
+      }
+    },
+    {
+      "id": "g4f-s10-q15",
+      "topic": "LOGIC",
+      "skill": "Counting numbers",
+      "difficulty": 2,
+      "prompt": "How many 3-digit numbers have digits that add up to 4?",
+      "answer": "10",
+      "unit": "numbers",
+      "hint": "Sort them by the hundreds digit: it can be 1, 2, 3 or 4.",
+      "solution": "Hundreds digit 1: 103, 112, 121, 130 (4). Hundreds digit 2: 202, 211, 220 (3). Hundreds digit 3: 301, 310 (2). Hundreds digit 4: 400 (1). Total: 4 + 3 + 2 + 1 = 10."
+    },
+    {
+      "id": "g4f-s10-q16",
+      "topic": "NUMBER",
+      "skill": "Adding in pairs",
+      "difficulty": 3,
+      "prompt": "What is the sum of all the whole numbers from 1 to 50?\n1 + 2 + 3 + … + 49 + 50",
+      "answer": "1275",
+      "hint": "Pair 1 with 50, 2 with 49, and so on. How many pairs are there?",
+      "solution": "Each pair adds to 51: 1 + 50, 2 + 49, …, 25 + 26. There are 25 pairs. 25 × 51 = 1,275."
+    },
+    {
+      "id": "g4f-s10-q17",
+      "topic": "ALGEBRA",
+      "skill": "Ages",
+      "difficulty": 3,
+      "prompt": "In 5 years, Tia will be twice as old as she was 4 years ago. How old is Tia now?",
+      "answer": "13",
+      "unit": "years old",
+      "hint": "The time from 4 years ago to 5 years from now is 9 years.",
+      "solution": "From 4 years ago to 5 years from now is 9 years. Her age then doubles, so her age 4 years ago was 9. Tia is 9 + 4 = 13. Check: in 5 years she is 18 = 2 × 9. ✓"
+    },
+    {
+      "id": "g4f-s10-q18",
+      "topic": "GEOMETRY",
+      "skill": "Surface area",
+      "difficulty": 3,
+      "prompt": "An open box (no lid) is 5 cm long, 4 cm wide and 3 cm tall. What is the total area of the outside of the box (the bottom and the 4 sides)?",
+      "answer": "74",
+      "unit": "sq cm",
+      "hint": "Find the area of the bottom, the two long sides and the two short sides.",
+      "solution": "Bottom: 5 × 4 = 20. Long sides: 2 × (5 × 3) = 30. Short sides: 2 × (4 × 3) = 24. Total: 20 + 30 + 24 = 74 sq cm."
+    },
+    {
+      "id": "g4f-s10-q19",
+      "topic": "LOGIC",
+      "skill": "Worst case",
+      "difficulty": 3,
+      "prompt": "What is the fewest number of kids that must be in a room to be sure that at least 3 of them have birthdays in the same month?",
+      "answer": "25",
+      "unit": "kids",
+      "hint": "How many kids could there be with no 3 sharing a month?",
+      "solution": "It's possible to have 2 kids in every month, which is 2 × 12 = 24 kids, with no 3 in the same month. One more kid makes 3 in some month. So 25 kids."
+    },
+    {
+      "id": "g4f-s10-q20",
+      "topic": "ALGEBRA",
+      "skill": "Triangular numbers",
+      "difficulty": 3,
+      "prompt": "Kim builds staircases out of squares. Step 1 uses 1 square, step 2 uses 1 + 2 = 3 squares, and step 3 uses 1 + 2 + 3 = 6 squares. How many squares does step 12 use?",
+      "answer": "78",
+      "unit": "squares",
+      "hint": "Add 1 + 2 + 3 + … + 12. Pairing helps.",
+      "solution": "Step 12 uses 1 + 2 + … + 12 squares. Pair them: 1 + 12, 2 + 11, …, 6 + 7 gives 6 pairs of 13. 6 × 13 = 78 squares.",
+      "figure": {
+        "type": "shape",
+        "points": [
+          {
+            "x": 0,
+            "y": 0
+          },
+          {
+            "x": 1,
+            "y": 0
+          },
+          {
+            "x": 1,
+            "y": 1
+          },
+          {
+            "x": 2,
+            "y": 1
+          },
+          {
+            "x": 2,
+            "y": 2
+          },
+          {
+            "x": 3,
+            "y": 2
+          },
+          {
+            "x": 3,
+            "y": 3
+          },
+          {
+            "x": 0,
+            "y": 3
+          }
+        ],
+        "showGrid": true
+      }
+    }
+  ]
+}

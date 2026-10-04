@@ -5,6 +5,11 @@ import com.testmynoetic.core.verify.set02
 import com.testmynoetic.core.verify.set03
 import com.testmynoetic.core.verify.set04
 import com.testmynoetic.core.verify.set05
+import com.testmynoetic.core.verify.set06
+import com.testmynoetic.core.verify.set07
+import com.testmynoetic.core.verify.set08
+import com.testmynoetic.core.verify.set09
+import com.testmynoetic.core.verify.set10
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNotNull
@@ -23,6 +28,11 @@ class BankTest {
         3 to set03,
         4 to set04,
         5 to set05,
+        6 to set06,
+        7 to set07,
+        8 to set08,
+        9 to set09,
+        10 to set10,
     )
 
     @Test
@@ -78,6 +88,14 @@ class BankTest {
                     else -> {}
                 }
             }
+        }
+    }
+
+    @Test
+    fun everySolutionStatesItsAnswer() {
+        bank.allQuestions.forEach { q ->
+            val forms = listOfNotNull(q.answer, q.answer.toIntOrNull()?.let { "%,d".format(java.util.Locale.US, it) })
+            assertTrue(forms.any { it in q.solution }, "${q.id}: solution never says ${q.answer}")
         }
     }
 

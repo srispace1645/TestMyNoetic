@@ -56,6 +56,7 @@ class AnswerCheckerTest {
     fun parseNumberEdgeCases() {
         assertEquals(Rational.of(12), AnswerChecker.parseNumber("12 years old"))
         assertEquals(Rational.of(-3), AnswerChecker.parseNumber("-3"))
+        assertEquals(Rational.of(11), AnswerChecker.parseNumber("Day 11"))
         assertNull(AnswerChecker.parseNumber("seven"))
         assertNull(AnswerChecker.parseNumber("3/0"))
         assertNull(AnswerChecker.parseNumber("."))

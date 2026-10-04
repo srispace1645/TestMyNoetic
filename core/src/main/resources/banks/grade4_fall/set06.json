@@ -1,0 +1,224 @@
+{
+  "id": "g4f-s06",
+  "title": "Practice Test 6",
+  "questions": [
+    {
+      "id": "g4f-s06-q01",
+      "topic": "NUMBER",
+      "skill": "Place value",
+      "difficulty": 1,
+      "prompt": "What number is 7,000 + 600 + 5?",
+      "answer": "7605",
+      "hint": "Write each part in its place: thousands, hundreds, tens, ones.",
+      "solution": "7 thousands, 6 hundreds, 0 tens and 5 ones make 7,605."
+    },
+    {
+      "id": "g4f-s06-q02",
+      "topic": "GEOMETRY",
+      "skill": "Units of time",
+      "difficulty": 1,
+      "prompt": "How many days are in 3 weeks and 4 days?",
+      "answer": "25",
+      "unit": "days",
+      "hint": "One week has 7 days.",
+      "solution": "3 weeks = 3 × 7 = 21 days. 21 + 4 = 25 days."
+    },
+    {
+      "id": "g4f-s06-q03",
+      "topic": "ALGEBRA",
+      "skill": "Square numbers",
+      "difficulty": 1,
+      "prompt": "What number comes next in this pattern?\n1, 4, 9, 16, 25, ___",
+      "answer": "36",
+      "hint": "1 = 1 × 1, 4 = 2 × 2, 9 = 3 × 3, …",
+      "solution": "These are square numbers: 1×1, 2×2, 3×3, 4×4, 5×5. Next is 6 × 6 = 36."
+    },
+    {
+      "id": "g4f-s06-q04",
+      "topic": "LOGIC",
+      "skill": "Possible results",
+      "difficulty": 1,
+      "prompt": "Ravi flips a coin and rolls a number cube with the numbers 1 to 6. How many different results are possible? (One result is \"heads and 3\".)",
+      "answer": "12",
+      "unit": "results",
+      "hint": "Each side of the coin can go with each number on the cube.",
+      "solution": "2 coin sides × 6 numbers = 12 results."
+    },
+    {
+      "id": "g4f-s06-q05",
+      "topic": "NUMBER",
+      "skill": "Division",
+      "difficulty": 1,
+      "prompt": "What is 84 ÷ 4?",
+      "answer": "21",
+      "hint": "Split 84 into 80 and 4.",
+      "solution": "80 ÷ 4 = 20 and 4 ÷ 4 = 1. 20 + 1 = 21."
+    },
+    {
+      "id": "g4f-s06-q06",
+      "topic": "GEOMETRY",
+      "skill": "Perimeter and area",
+      "difficulty": 2,
+      "prompt": "A square has a perimeter of 36 inches. What is its area?",
+      "answer": "81",
+      "unit": "sq in",
+      "hint": "Find the length of one side first.",
+      "solution": "Each side is 36 ÷ 4 = 9 inches. Area = 9 × 9 = 81 square inches."
+    },
+    {
+      "id": "g4f-s06-q07",
+      "topic": "ALGEBRA",
+      "skill": "Equal values",
+      "difficulty": 2,
+      "prompt": "At a bake sale, 4 muffins cost the same as 3 cupcakes. One cupcake costs $2. How much do 6 muffins cost?",
+      "answer": "9",
+      "unitBefore": "$",
+      "hint": "What do 3 cupcakes cost? That's also the price of 4 muffins.",
+      "solution": "3 cupcakes cost 3 × $2 = $6, so 4 muffins cost $6 and one muffin costs $6 ÷ 4 = $1.50. 6 muffins cost 6 × $1.50 = $9."
+    },
+    {
+      "id": "g4f-s06-q08",
+      "topic": "LOGIC",
+      "skill": "Patterns in a line",
+      "difficulty": 2,
+      "prompt": "Thirty kids stand in a line for the harvest parade. Every 3rd kid in line wears a hat, and every 5th kid holds a balloon. How many kids wear a hat and also hold a balloon?",
+      "answer": "2",
+      "unit": "kids",
+      "hint": "Which spots in line are counted by both 3s and 5s?",
+      "solution": "Kids with hats are in spots 3, 6, 9, … Kids with balloons are in spots 5, 10, 15, … Spots in both lists are multiples of 15: spots 15 and 30. That's 2 kids."
+    },
+    {
+      "id": "g4f-s06-q09",
+      "topic": "NUMBER",
+      "skill": "Remainders",
+      "difficulty": 2,
+      "prompt": "What is the remainder when 1,000 is divided by 7?",
+      "answer": "6",
+      "hint": "7 × 100 = 700 and 7 × 40 = 280. How close can you get to 1,000?",
+      "solution": "7 × 142 = 994. 1,000 − 994 = 6, so the remainder is 6."
+    },
+    {
+      "id": "g4f-s06-q10",
+      "topic": "GEOMETRY",
+      "skill": "Perimeter and area",
+      "difficulty": 2,
+      "prompt": "A rectangle has a perimeter of 32 meters. Its length is 4 meters more than its width. What is the area of the rectangle?",
+      "answer": "60",
+      "unit": "sq m",
+      "hint": "One length plus one width is half of the perimeter.",
+      "solution": "Length + width = 32 ÷ 2 = 16 m. Take away the extra 4: 16 − 4 = 12, so the width is 6 m and the length is 10 m. Area = 10 × 6 = 60 square meters."
+    },
+    {
+      "id": "g4f-s06-q11",
+      "topic": "ALGEBRA",
+      "skill": "Working backwards",
+      "difficulty": 2,
+      "prompt": "A number machine adds 5 to a number and then doubles the result. Bo puts in a number and gets 36 out. What number did Bo put in?",
+      "answer": "13",
+      "hint": "Undo the steps in the opposite order.",
+      "solution": "Undo the doubling: 36 ÷ 2 = 18. Undo adding 5: 18 − 5 = 13. Check: (13 + 5) × 2 = 36. ✓"
+    },
+    {
+      "id": "g4f-s06-q12",
+      "topic": "LOGIC",
+      "skill": "Combinations",
+      "difficulty": 2,
+      "prompt": "Bella's lunch has one sandwich, one drink and one fruit. She can choose from 3 sandwiches, 4 drinks and 2 fruits. How many different lunches can she make?",
+      "answer": "24",
+      "unit": "lunches",
+      "hint": "Multiply the number of choices for each part.",
+      "solution": "3 × 4 × 2 = 24 different lunches."
+    },
+    {
+      "id": "g4f-s06-q13",
+      "topic": "NUMBER",
+      "skill": "Comparing fractions",
+      "difficulty": 2,
+      "prompt": "Which of these fractions is the largest?\n3/8, 1/2, 5/12, 2/3, 3/5",
+      "answer": "2/3",
+      "hint": "Which fractions are more than one-half?",
+      "solution": "3/8 and 5/12 are less than 1/2. 3/5 and 2/3 are more than 1/2. Compare them using fifteenths: 3/5 = 9/15 and 2/3 = 10/15. So 2/3 is the largest."
+    },
+    {
+      "id": "g4f-s06-q14",
+      "topic": "GEOMETRY",
+      "skill": "Symmetry",
+      "difficulty": 2,
+      "prompt": "How many lines of symmetry does a square have?",
+      "answer": "4",
+      "unit": "lines",
+      "hint": "Try folding a square so the two halves match exactly. Don't forget the diagonals.",
+      "solution": "A square has 4 lines of symmetry: one up-and-down, one side-to-side and two diagonals."
+    },
+    {
+      "id": "g4f-s06-q15",
+      "topic": "ALGEBRA",
+      "skill": "Times as many",
+      "difficulty": 2,
+      "prompt": "Grandpa is 5 times as old as Ana. Grandpa is 48 years older than Ana. How old is Grandpa?",
+      "answer": "60",
+      "unit": "years old",
+      "hint": "If Ana's age is 1 part, Grandpa's age is 5 parts. How many parts is the difference?",
+      "solution": "The difference is 5 − 1 = 4 parts, and 4 parts = 48 years. One part = 12, so Ana is 12 and Grandpa is 5 × 12 = 60."
+    },
+    {
+      "id": "g4f-s06-q16",
+      "topic": "NUMBER",
+      "skill": "Remainders",
+      "difficulty": 3,
+      "prompt": "What is the smallest whole number greater than 1 that leaves a remainder of 1 when it is divided by 2, by 3, by 4, by 5 and by 6?",
+      "answer": "61",
+      "hint": "One less than the number can be divided evenly by 2, 3, 4, 5 and 6.",
+      "solution": "One less than the number must be a multiple of 2, 3, 4, 5 and 6. The smallest such number is 60. So the answer is 60 + 1 = 61."
+    },
+    {
+      "id": "g4f-s06-q17",
+      "topic": "LOGIC",
+      "skill": "Choosing groups",
+      "difficulty": 3,
+      "prompt": "Five dots are placed on a circle. How many different triangles can be made by connecting 3 of the dots?",
+      "answer": "10",
+      "unit": "triangles",
+      "hint": "Choosing 3 dots to use is the same as choosing 2 dots to leave out.",
+      "solution": "Leaving out 2 of the 5 dots: there are 4 + 3 + 2 + 1 = 10 ways. Each way gives a different triangle, so there are 10 triangles."
+    },
+    {
+      "id": "g4f-s06-q18",
+      "topic": "GEOMETRY",
+      "skill": "Area of a border",
+      "difficulty": 3,
+      "prompt": "A path 1 meter wide goes all the way around the outside of a rectangular pool. The pool is 8 meters long and 5 meters wide. What is the area of the path?",
+      "answer": "30",
+      "unit": "sq m",
+      "hint": "Find the area of the pool plus the path together, then take away the pool.",
+      "solution": "Pool plus path is (8 + 2) by (5 + 2) = 10 by 7 meters, which is 70 square meters. The pool is 8 × 5 = 40. Path: 70 − 40 = 30 square meters."
+    },
+    {
+      "id": "g4f-s06-q19",
+      "topic": "ALGEBRA",
+      "skill": "Growing patterns",
+      "difficulty": 3,
+      "prompt": "One square table seats 4 people, one on each side. When 2 tables are pushed together in a row, 6 people can sit. How many people can sit when 15 tables are pushed together in a row?",
+      "answer": "32",
+      "unit": "people",
+      "hint": "Count the seats along the two long sides, then add the two ends.",
+      "solution": "Each table has one seat on the top side and one on the bottom side: 15 + 15 = 30. Add 1 seat at each end: 30 + 2 = 32 people.",
+      "figure": {
+        "type": "grid",
+        "rows": 1,
+        "cols": 2
+      }
+    },
+    {
+      "id": "g4f-s06-q20",
+      "topic": "LOGIC",
+      "skill": "Logic puzzles",
+      "difficulty": 3,
+      "prompt": "Ana, Ben, Cara and Dev each have a different pet: a cat, a dog, a fish or a bird. Ana's pet has no fur and cannot fly. Ben's pet has fur but does not bark. Cara does not have the bird. Who has the bird?",
+      "answer": "Dev",
+      "kind": "WORD",
+      "hint": "Find Ana's pet first, then Ben's.",
+      "solution": "No fur and can't fly: Ana has the fish. Fur but no bark: Ben has the cat. Cara doesn't have the bird, so Cara has the dog. Dev has the bird."
+    }
+  ]
+}

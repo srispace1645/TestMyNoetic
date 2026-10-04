@@ -28,7 +28,8 @@ object AnswerChecker {
             .replace("¢", "")
             .replace("°", "")
             .replace("−", "-")
-        // Drop a trailing unit word such as "cats", "sq cm" or "minutes".
+        // Drop a leading word like "day" in "Day 11", and a trailing unit word such as "cats", "sq cm" or "minutes".
+        s = s.replace(Regex("""^[a-z]+\s+(?=[-.\d])"""), "")
         s = s.replace(Regex("""\s*[a-z][a-z .²]*$"""), "")
         s = s.trim().removeSuffix(".").trim()
         return Rational.parse(s)
