@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
+    `java-library`
     id("org.jetbrains.kotlin.jvm")
     id("org.jetbrains.kotlin.plugin.serialization")
 }
@@ -17,7 +18,7 @@ kotlin {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+    api("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:2.0.21")
 }
 
