@@ -36,10 +36,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.testmynoetic.core.AnswerKind
 import com.testmynoetic.core.QuestionSet
 import com.testmynoetic.core.Topic
 import com.testmynoetic.prep.AppViewModel
@@ -49,20 +52,21 @@ import kotlinx.coroutines.delay
 @Composable
 fun SetsScreen(vm: AppViewModel) {
     var pending by remember { mutableStateOf<QuestionSet?>(null) }
+    val first = remember { FocusRequester() }
+    TvFocus(first)
     Page(title = "Practice Tests", onBack = vm::back) {
         Text(
             "Each test has 20 questions that get harder as you go, just like the real contest.",
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
-        vm.bank.sets.forEachIndexed { i, set ->
-            val best = vm.bestScore(set.title)
-            MenuCard(
-                emoji = "${i + 1}",
-                title = set.title,
-                subtitle = if (best == null) "Not tried yet" else "Best score: $best / 100",
-            ) { pending = set }
-        }
+        MenuGrid(
+            vm.bank.sets.mapIndexed { i, set ->
+                val best = vm.bestScore(set.title)
+                MenuItem("${i + 1}", set.title, if (best == null) "Not tried yet" else "Best score: $best / 100") { pending = set }
+            },
+            firstFocus = first,
+        )
     }
     pending?.let { set ->
         AlertDialog(
@@ -73,8 +77,8 @@ fun SetsScreen(vm: AppViewModel) {
                     "• 20 questions, 45 minutes\n• No calculator. Use scratch paper!\n• You can skip and come back\n• Answers are checked when you finish",
                 )
             },
-            confirmButton = { Button(onClick = { pending = null; vm.startExam(set) }) { Text("Start") } },
-            dismissButton = { TextButton(onClick = { pending = null }) { Text("Not now") } },
+            confirmButton = { Button(onClick = { pending = null; vm.startExam(set) }, modifier = Modifier.focusRing()) { Text("Start") } },
+            dismissButton = { TextButton(onClick = { pending = null }, modifier = Modifier.focusRing()) { Text("Not now") } },
         )
     }
 }
@@ -85,6 +89,8 @@ fun ExamScreen(vm: AppViewModel, session: ExamSession) {
     var confirmFinish by remember { mutableStateOf(false) }
     var confirmQuit by remember { mutableStateOf(false) }
     val left = session.secondsLeft(now)
+    val answerFocus = remember { FocusRequester() }
+    TvFocus(answerFocus)
 
     LaunchedEffect(session) {
         while (session.result == null) {
@@ -97,6 +103,7 @@ fun ExamScreen(vm: AppViewModel, session: ExamSession) {
 
     val i = session.index
     val q = session.questions[i]
+    val last = i == session.questions.lastIndex
     Page(
         title = "Question ${i + 1} of ${session.questions.size}",
         onBack = { confirmQuit = true },
@@ -109,26 +116,48 @@ fun ExamScreen(vm: AppViewModel, session: ExamSession) {
             )
         },
     ) {
-        QuestionStrip(session)
-        QuestionCard(q, number = i + 1)
-        AnswerInput(
-            question = q,
-            value = session.answers[i].orEmpty(),
-            onValueChange = { session.answers[i] = it },
-            onDone = { if (i < session.questions.lastIndex) session.index = i + 1 },
-        )
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-            val flagged = session.flagged[i] == true
-            OutlinedButton(onClick = { session.flagged[i] = !flagged }) { Text(if (flagged) "🚩 Flagged" else "Flag") }
-            OutlinedButton(onClick = { session.index = i - 1 }, enabled = i > 0) { Text("Back") }
-            if (i < session.questions.lastIndex) {
-                Button(onClick = { session.index = i + 1 }, modifier = Modifier.weight(1f)) { Text("Next") }
-            } else {
-                Button(onClick = { confirmFinish = true }, modifier = Modifier.weight(1f)) { Text("Finish") }
+        val typeKeys = Modifier.answerKeys(q.kind == AnswerKind.NUMBER) { key ->
+            session.answers[i] = applyAnswerKey(session.answers[i].orEmpty(), key)
+        }
+        val answerSide = @Composable {
+            AnswerInput(
+                question = q,
+                value = session.answers[i].orEmpty(),
+                onValueChange = { session.answers[i] = it },
+                focusRequester = answerFocus,
+                onDone = { if (!last) session.index = i + 1 },
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                val flagged = session.flagged[i] == true
+                OutlinedButton(onClick = { session.flagged[i] = !flagged }, modifier = Modifier.focusRing()) {
+                    Text(if (flagged) "🚩 Flagged" else "Flag")
+                }
+                // Stays enabled on question 1 so the remote's focus never lands on a dead button.
+                OutlinedButton(onClick = { if (i > 0) session.index = i - 1 }, modifier = Modifier.focusRing()) { Text("Back") }
+                // One button that changes from Next to Finish, so focus stays put on the last question.
+                Button(
+                    onClick = { if (last) confirmFinish = true else session.index = i + 1 },
+                    modifier = Modifier.weight(1f).focusRing().testTag("next"),
+                ) { Text(if (last) "Finish" else "Next") }
+            }
+            if (!last) {
+                TextButton(onClick = { confirmFinish = true }, modifier = Modifier.focusRing()) { Text("Finish test now") }
             }
         }
-        if (i < session.questions.lastIndex) {
-            TextButton(onClick = { confirmFinish = true }) { Text("Finish test now") }
+        if (LocalWide.current) {
+            Row(typeKeys.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(24.dp)) {
+                Column(Modifier.weight(1.15f), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    QuestionStrip(session)
+                    QuestionCard(q, number = i + 1)
+                }
+                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(12.dp)) { answerSide() }
+            }
+        } else {
+            Column(typeKeys, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                QuestionStrip(session)
+                QuestionCard(q, number = i + 1)
+                answerSide()
+            }
         }
     }
 
@@ -138,8 +167,10 @@ fun ExamScreen(vm: AppViewModel, session: ExamSession) {
             onDismissRequest = { confirmFinish = false },
             title = { Text("Finish the test?") },
             text = { Text(if (blanks == 0) "You answered every question." else "You left $blanks question${if (blanks == 1) "" else "s"} blank. Blank answers count as wrong.") },
-            confirmButton = { Button(onClick = { confirmFinish = false; vm.finishExam(session, timedOut = false) }) { Text("Finish") } },
-            dismissButton = { TextButton(onClick = { confirmFinish = false }) { Text("Keep working") } },
+            confirmButton = {
+                Button(onClick = { confirmFinish = false; vm.finishExam(session, timedOut = false) }, modifier = Modifier.focusRing()) { Text("Finish") }
+            },
+            dismissButton = { TextButton(onClick = { confirmFinish = false }, modifier = Modifier.focusRing()) { Text("Keep working") } },
         )
     }
     if (confirmQuit) {
@@ -147,8 +178,8 @@ fun ExamScreen(vm: AppViewModel, session: ExamSession) {
             onDismissRequest = { confirmQuit = false },
             title = { Text("Leave this test?") },
             text = { Text("Your answers for this test won't be saved.") },
-            confirmButton = { TextButton(onClick = { confirmQuit = false; vm.back() }) { Text("Leave") } },
-            dismissButton = { Button(onClick = { confirmQuit = false }) { Text("Stay") } },
+            confirmButton = { TextButton(onClick = { confirmQuit = false; vm.back() }, modifier = Modifier.focusRing()) { Text("Leave") } },
+            dismissButton = { Button(onClick = { confirmQuit = false }, modifier = Modifier.focusRing()) { Text("Stay") } },
         )
     }
 }
@@ -165,7 +196,9 @@ private fun QuestionStrip(session: ExamSession) {
             val flagged = session.flagged[idx] == true
             Box(
                 Modifier
+                    .padding(4.dp)
                     .size(36.dp)
+                    .focusRing(CircleShape)
                     .background(if (answered) MaterialTheme.colorScheme.primary else Color.Transparent, CircleShape)
                     .border(
                         BorderStroke(
@@ -195,30 +228,36 @@ private fun QuestionStrip(session: ExamSession) {
 fun ResultsScreen(vm: AppViewModel, session: ExamSession) {
     val result = session.result ?: return
     val open = remember { mutableStateMapOf<Int, Boolean>() }
+    val home = remember { FocusRequester() }
+    TvFocus(home)
     Page(title = "${session.title} · Results", onBack = vm::back) {
         Card(
             modifier = Modifier.fillMaxWidth(),
             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer),
         ) {
-            Column(Modifier.padding(20.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+            Column(Modifier.padding(20.dp).fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
                 if (session.timedOut) Text("⏰ Time's up!", style = MaterialTheme.typography.titleMedium)
                 Text("${result.score} / ${result.maxScore}", style = MaterialTheme.typography.displayMedium, fontWeight = FontWeight.Bold)
                 Text("${result.correct} of ${result.total} correct · time used ${clockText(session.secondsUsed)}")
                 Text(cheer(result.correct, result.total), style = MaterialTheme.typography.bodyLarge, modifier = Modifier.padding(top = 8.dp))
             }
         }
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            OutlinedButton(onClick = vm::back, modifier = Modifier.weight(1f).focusRing()) { Text("Back") }
+            Button(onClick = vm::goHome, modifier = Modifier.weight(1f).optionalFocus(home).focusRing()) { Text("Home") }
+        }
         Text("By topic", style = MaterialTheme.typography.titleMedium)
         Topic.entries.forEach { t ->
             val s = result.byTopic[t] ?: return@forEach
             TopicBar(t.label, s.correct, s.total)
         }
-        Text("Questions (tap to see the solution)", style = MaterialTheme.typography.titleMedium)
+        Text("Questions (select one to see the solution)", style = MaterialTheme.typography.titleMedium)
         session.questions.forEachIndexed { idx, q ->
             val right = result.perQuestion[idx]
             val expanded = open[idx] == true
             Card(
                 onClick = { open[idx] = !expanded },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().focusRing(),
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
             ) {
                 Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -236,10 +275,6 @@ fun ResultsScreen(vm: AppViewModel, session: ExamSession) {
                     }
                 }
             }
-        }
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedButton(onClick = vm::back, modifier = Modifier.weight(1f)) { Text("Back") }
-            Button(onClick = vm::goHome, modifier = Modifier.weight(1f)) { Text("Home") }
         }
     }
 }

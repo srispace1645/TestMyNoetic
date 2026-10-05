@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- A simple "+" and "÷" mark on a teal tile. -->
+<!-- Mathlete Prep: a gold "4" medal on a red-and-blue ribbon. Same shapes as the PNG icons and TV banner. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
     <path
-        android:fillColor="#FFFFFFFF"
-        android:pathData="M38,34h8v12h12v8h-12v12h-8v-12h-12v-8h12z" />
+        android:fillColor="#FF3A6FD8"
+        android:pathData="M60,26 L70,26 L57,54 L48,50 Z" />
     <path
-        android:fillColor="#FFF2A541"
-        android:pathData="M60,57h22v6h-22z" />
+        android:fillColor="#FFD64545"
+        android:pathData="M38,26 L48,26 L60,50 L51,54 Z" />
     <path
-        android:fillColor="#FFF2A541"
-        android:pathData="M71,48m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" />
+        android:fillColor="#FFC9901E"
+        android:pathData="M35,62 a19,19 0 1,0 38,0 a19,19 0 1,0 -38,0 Z" />
     <path
-        android:fillColor="#FFF2A541"
-        android:pathData="M71,72m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" />
+        android:fillColor="#FFF5C542"
+        android:pathData="M38.5,62 a15.5,15.5 0 1,0 31,0 a15.5,15.5 0 1,0 -31,0 Z" />
+    <path
+        android:fillColor="#FF6B4508"
+        android:fillType="evenOdd"
+        android:pathData="M55,52 L59.5,52 L59.5,64 L63,64 L63,67.5 L59.5,67.5 L59.5,72 L55,72 L55,67.5 L45,67.5 L45,64 Z M55,58 L55,64 L50,64 Z" />
 </vector>

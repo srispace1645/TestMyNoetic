@@ -8,7 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -28,6 +30,36 @@ jobs:
       - name: Upload the APK
         uses: actions/upload-artifact@v4
         with:
-          name: math-contest-prep-apk
+          name: mathlete-prep-apk
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
+
+      - name: Test the TV remote controls and take screenshots
+        run: ./gradlew :app:testDebugUnitTest --console=plain
+
+      - name: Upload the screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: app/build/outputs/roborazzi/
+          if-no-files-found: ignore
+
+      # Replaces the ci-screenshots branch with this build's pictures so they can be viewed without downloading.
+      - name: Publish screenshots to the ci-screenshots branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/claude/noetic-math-prep-app-0ue3sz'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          SHOTS="$RUNNER_TEMP/shots"
+          mkdir -p "$SHOTS"
+          cp app/build/outputs/roborazzi/*.png "$SHOTS"/
+          cd "$SHOTS"
+          echo "Screenshots from commit ${GITHUB_SHA}. This branch is replaced on every build." > README.md
+          git init -q -b ci-screenshots
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Screenshots for ${GITHUB_SHA}"
+          git push -f -q "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ci-screenshots

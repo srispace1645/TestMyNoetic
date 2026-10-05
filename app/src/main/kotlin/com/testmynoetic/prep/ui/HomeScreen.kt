@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.testmynoetic.prep.AppViewModel
@@ -23,22 +24,29 @@ fun HomeScreen(vm: AppViewModel) {
     val info = vm.bank.info
     val days = remember { vm.bank.daysUntilContest(LocalDate.now()) }
     val mistakes = vm.progress.mistakeIds().size
-    Page(title = info.title, onBack = null) {
+    val first = remember { FocusRequester() }
+    TvFocus(first)
+    Page(title = "Mathlete Prep", onBack = null) {
         Text(
-            "Practice for the fall math contest: 20 short-answer questions, 45 minutes, no calculator.",
+            "${info.title}: practice for the math contest. 20 short-answer questions, 45 minutes, no calculator.",
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
         )
         CountdownCard(days, info.contestStart, info.contestEnd)
-        MenuCard("📝", "Practice Tests", "${vm.bank.sets.size} full tests under contest rules") { vm.open(Screen.Sets) }
-        MenuCard("🔀", "Shuffle Test", "A fresh mix of 20 questions from all the tests") { vm.startShuffleTest() }
-        MenuCard("🎯", "Practice by Topic", "One question at a time, with hints and solutions") { vm.open(Screen.Topics) }
-        MenuCard("⚡", "Quick Drill", "Endless warm-up questions. How long can your streak go?") { vm.open(Screen.Drills) }
-        MenuCard(
-            "🔁", "Review Mistakes",
-            if (mistakes == 0) "Nothing to review yet" else "$mistakes question${if (mistakes == 1) "" else "s"} to fix",
-        ) { vm.startReview() }
-        MenuCard("📈", "My Progress", "Test scores and strong and weak topics") { vm.open(Screen.Stats) }
+        MenuGrid(
+            listOf(
+                MenuItem("📝", "Practice Tests", "${vm.bank.sets.size} full tests under contest rules") { vm.open(Screen.Sets) },
+                MenuItem("🔀", "Shuffle Test", "A fresh mix of 20 questions from all the tests") { vm.startShuffleTest() },
+                MenuItem("🎯", "Practice by Topic", "One question at a time, with hints and solutions") { vm.open(Screen.Topics) },
+                MenuItem("⚡", "Quick Drill", "Endless warm-up questions. How long can your streak go?") { vm.open(Screen.Drills) },
+                MenuItem(
+                    "🔁", "Review Mistakes",
+                    if (mistakes == 0) "Nothing to review yet" else "$mistakes question${if (mistakes == 1) "" else "s"} to fix",
+                ) { vm.startReview() },
+                MenuItem("📈", "My Progress", "Test scores and strong and weak topics") { vm.open(Screen.Stats) },
+            ),
+            firstFocus = first,
+        )
     }
 }
 

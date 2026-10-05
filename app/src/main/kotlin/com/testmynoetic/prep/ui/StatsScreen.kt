@@ -59,15 +59,15 @@ fun StatsScreen(vm: AppViewModel) {
                 Text("${m.correct * 5} / ${m.total * 5}", fontWeight = FontWeight.SemiBold)
             }
         }
-        OutlinedButton(onClick = { confirmReset = true }, modifier = Modifier.padding(top = 16.dp)) { Text("Reset all progress") }
+        OutlinedButton(onClick = { confirmReset = true }, modifier = Modifier.padding(top = 16.dp).focusRing()) { Text("Reset all progress") }
     }
     if (confirmReset) {
         AlertDialog(
             onDismissRequest = { confirmReset = false },
             title = { Text("Reset all progress?") },
             text = { Text("This erases test scores, topic stats and the review list on this phone.") },
-            confirmButton = { TextButton(onClick = { confirmReset = false; vm.resetProgress() }) { Text("Reset") } },
-            dismissButton = { Button(onClick = { confirmReset = false }) { Text("Cancel") } },
+            confirmButton = { TextButton(onClick = { confirmReset = false; vm.resetProgress() }, modifier = Modifier.focusRing()) { Text("Reset") } },
+            dismissButton = { Button(onClick = { confirmReset = false }, modifier = Modifier.focusRing()) { Text("Cancel") } },
         )
     }
 }
