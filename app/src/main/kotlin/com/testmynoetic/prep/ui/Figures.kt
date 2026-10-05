@@ -22,6 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
@@ -38,6 +39,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.testmynoetic.core.Figure
 import kotlin.math.PI
+import kotlin.math.abs
 import kotlin.math.ceil
 import kotlin.math.cos
 import kotlin.math.hypot
@@ -299,18 +301,45 @@ private fun ShapeFigure(f: Figure.Shape) {
             }
         }
         drawPath(path, ink, style = Stroke(3.dp.toPx()))
+        // Put each label just outside its side. If it would overlap a label already drawn
+        // (common at an inside corner), slide it along its side, then further out.
+        val placed = mutableListOf<Rect>()
+        val gap = 6.dp.toPx()
+        val step = 4.dp.toPx()
         f.sideLabels.forEach { (i, text) ->
             val a = pts[i]
             val b = pts[(i + 1) % pts.size]
+            val len = hypot(b.x - a.x, b.y - a.y)
+            val tx = ((b.x - a.x) / len).toFloat()
+            val ty = ((b.y - a.y) / len).toFloat()
+            var nx = ty
+            var ny = -tx
             val mx = (a.x + b.x) / 2
             val my = (a.y + b.y) / 2
-            val len = hypot(b.x - a.x, b.y - a.y)
-            var nx = (b.y - a.y) / len
-            var ny = -(b.x - a.x) / len
             if (insidePolygon(pts.map { it.x to it.y }, mx + nx * 0.05, my + ny * 0.05)) { nx = -nx; ny = -ny }
             val anchor = map(mx, my)
-            val push = 18.dp.toPx()
-            centeredText(measurer, text, Offset(anchor.x + (nx * push).toFloat(), anchor.y + (ny * push).toFloat()), labelStyle)
+            val layout = measurer.measure(text, labelStyle)
+            val lw = layout.size.width.toFloat()
+            val lh = layout.size.height.toFloat()
+            val basePush = abs(nx) * lw / 2 + abs(ny) * lh / 2 + gap
+            val maxSlide = (len * scale / 2).toFloat()
+            fun rectAt(push: Float, slide: Float): Rect {
+                val cx = anchor.x + nx * push + tx * slide
+                val cy = anchor.y + ny * push + ty * slide
+                return Rect(cx - lw / 2, cy - lh / 2, cx + lw / 2, cy + lh / 2)
+            }
+            val candidates = sequence {
+                var k = 0
+                while (k * step <= maxSlide) {
+                    yield(rectAt(basePush, k * step))
+                    if (k > 0) yield(rectAt(basePush, -k * step))
+                    k++
+                }
+                for (extra in 1..10) yield(rectAt(basePush + extra * step, 0f))
+            }
+            val spot = candidates.firstOrNull { c -> placed.none { it.overlaps(c) } } ?: rectAt(basePush, 0f)
+            placed += spot
+            drawText(layout, topLeft = spot.topLeft)
         }
     }
 }
