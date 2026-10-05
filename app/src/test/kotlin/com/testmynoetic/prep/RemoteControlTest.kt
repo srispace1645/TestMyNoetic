@@ -49,7 +49,7 @@ class RemoteControlTest {
     private fun SemanticsNodeInteraction.focused() = fetchSemanticsNode().config.getOrElse(SemanticsProperties.Focused) { false }
 
     /** Presses [keys] in order until [target] has focus; fails if it never does. */
-    private fun reach(target: SemanticsNodeInteraction, vararg keys: Key) {
+    private fun reach(target: SemanticsNodeInteraction, keys: List<Key>) {
         for (key in keys) {
             if (target.focused()) return
             press(key)
@@ -76,9 +76,9 @@ class RemoteControlTest {
         compose.onNodeWithTag("key-7").assertIsFocused()
 
         // Type 1000 with the on-screen keypad: down to 1, select, then down to 0 and select three times.
-        reach(compose.onNodeWithTag("key-1"), Key.DirectionDown, Key.DirectionDown)
+        reach(compose.onNodeWithTag("key-1"), listOf(Key.DirectionDown, Key.DirectionDown))
         press(Key.DirectionCenter)
-        reach(compose.onNodeWithTag("key-0"), Key.DirectionDown)
+        reach(compose.onNodeWithTag("key-0"), listOf(Key.DirectionDown))
         repeat(3) { press(Key.DirectionCenter) }
         val exam = (vm.backStack.last() as Screen.Exam).session
         assertEquals("1000", exam.answers[0])
@@ -89,7 +89,7 @@ class RemoteControlTest {
         assertEquals("1000", exam.answers[0])
 
         val next = compose.onNodeWithTag("next")
-        reach(next, Key.DirectionDown, Key.DirectionRight, Key.DirectionRight, Key.DirectionRight)
+        reach(next, listOf(Key.DirectionDown, Key.DirectionRight, Key.DirectionRight, Key.DirectionRight))
         press(Key.DirectionCenter)
         assertEquals(1, exam.index)
         compose.onNodeWithText("Question 2 of 20").assertExists()
