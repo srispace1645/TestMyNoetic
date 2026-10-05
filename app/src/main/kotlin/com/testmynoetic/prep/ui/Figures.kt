@@ -276,7 +276,8 @@ private fun ShapeFigure(f: Figure.Shape) {
     val w = pts.maxOf { it.x } - minX
     val h = pts.maxOf { it.y } - minY
     val ratio = ((w + 3) / (h + 3)).toFloat().coerceIn(0.8f, 2.2f)
-    Canvas(Modifier.widthIn(max = 420.dp).fillMaxWidth().aspectRatio(ratio)) {
+    // No fillMaxWidth here: aspectRatio can then shrink the width when the height is capped on TVs.
+    Canvas(Modifier.widthIn(max = 420.dp).aspectRatio(ratio)) {
         val margin = 34.dp.toPx()
         val scale = min((size.width - 2 * margin) / w.toFloat(), (size.height - 2 * margin) / h.toFloat())
         val ox = (size.width - w.toFloat() * scale) / 2
