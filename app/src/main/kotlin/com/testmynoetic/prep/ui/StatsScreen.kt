@@ -34,7 +34,7 @@ fun StatsScreen(vm: AppViewModel) {
         ) {
             Column(Modifier.padding(16.dp)) {
                 Text("${p.topicTotal.values.sum()} questions answered", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                Text("${p.mocks.size} tests taken · best drill streak ${p.bestDrillStreak}")
+                Text("${p.mocks.size} test${if (p.mocks.size == 1) "" else "s"} taken · best drill streak ${p.bestDrillStreak}")
                 Text("${p.mistakeIds().size} questions waiting in Review Mistakes")
             }
         }

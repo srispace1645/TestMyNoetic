@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
@@ -46,7 +47,9 @@ import kotlin.math.sin
 /** Draws a question's picture from its data description. */
 @Composable
 fun FigureView(figure: Figure) {
-    Box(Modifier.fillMaxWidth().padding(vertical = 4.dp), contentAlignment = Alignment.Center) {
+    // On a TV the question sits beside the keypad, so keep pictures short enough to fit without scrolling.
+    val fit = if (LocalWide.current) Modifier.heightIn(max = 240.dp) else Modifier
+    Box(Modifier.fillMaxWidth().padding(vertical = 4.dp).then(fit), contentAlignment = Alignment.Center) {
         when (figure) {
             is Figure.TextArt -> TextArtFigure(figure)
             is Figure.Pyramid -> PyramidFigure(figure)

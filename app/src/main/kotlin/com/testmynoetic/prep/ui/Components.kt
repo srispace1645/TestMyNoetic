@@ -43,6 +43,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.focus.FocusRequester
@@ -51,12 +52,14 @@ import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.input.InputMode
 import androidx.compose.ui.input.key.Key
 import androidx.compose.ui.input.key.KeyEventType
 import androidx.compose.ui.input.key.key
 import androidx.compose.ui.input.key.onKeyEvent
 import androidx.compose.ui.input.key.type
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalInputModeManager
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -98,10 +101,14 @@ fun Modifier.optionalFocus(requester: FocusRequester?): Modifier =
     if (requester == null) this else focusRequester(requester)
 
 /** On TVs, moves the remote's focus to [requester] whenever [key] changes (and when the screen opens). */
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun TvFocus(requester: FocusRequester, key: Any? = Unit) {
     if (!isTv()) return
+    val inputMode = LocalInputModeManager.current
     LaunchedEffect(key) {
+        // Buttons only take focus in remote/keyboard mode. A TV should start that way, but make sure.
+        inputMode.requestInputMode(InputMode.Keyboard)
         withFrameNanos { }
         runCatching { requester.requestFocus() }
     }
