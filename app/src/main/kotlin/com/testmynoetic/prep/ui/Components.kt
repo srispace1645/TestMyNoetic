@@ -3,9 +3,9 @@
 package com.testmynoetic.prep.ui
 
 import android.content.res.Configuration
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -19,15 +19,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -53,22 +51,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.InputMode
-import androidx.compose.ui.input.key.Key
-import androidx.compose.ui.input.key.KeyEventType
-import androidx.compose.ui.input.key.key
-import androidx.compose.ui.input.key.onKeyEvent
-import androidx.compose.ui.input.key.type
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalInputModeManager
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.input.KeyboardCapitalization
-import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.testmynoetic.core.AnswerKind
+import com.testmynoetic.core.AnswerChecker
+import com.testmynoetic.core.ChoiceMaker
 import com.testmynoetic.core.Question
 
 /** True on Fire TV and other TVs. */
@@ -235,128 +225,69 @@ fun QuestionCard(question: Question, number: Int?) {
     }
 }
 
-/** What a keypad key (or a remote's number button) does to the typed answer. */
-fun applyAnswerKey(value: String, key: String): String = when (key) {
-    "⌫" -> value.dropLast(1)
-    "Clear" -> ""
-    else -> if (value.length < 12) value + key else value
-}
-
-/** Lets remotes and keyboards with number buttons type number answers directly. */
-fun Modifier.answerKeys(enabled: Boolean, onKey: (String) -> Unit): Modifier =
-    if (!enabled) this else onKeyEvent { event ->
-        if (event.type != KeyEventType.KeyDown) return@onKeyEvent false
-        val typed = when (event.key) {
-            Key.Zero, Key.NumPad0 -> "0"
-            Key.One, Key.NumPad1 -> "1"
-            Key.Two, Key.NumPad2 -> "2"
-            Key.Three, Key.NumPad3 -> "3"
-            Key.Four, Key.NumPad4 -> "4"
-            Key.Five, Key.NumPad5 -> "5"
-            Key.Six, Key.NumPad6 -> "6"
-            Key.Seven, Key.NumPad7 -> "7"
-            Key.Eight, Key.NumPad8 -> "8"
-            Key.Nine, Key.NumPad9 -> "9"
-            Key.Period, Key.NumPadDot -> "."
-            Key.Slash, Key.NumPadDivide -> "/"
-            Key.Backspace -> "⌫"
-            else -> null
-        } ?: return@onKeyEvent false
-        onKey(typed)
-        true
-    }
-
 /**
- * "Answer: $ ____ unit", like the paper test. Number answers use the built-in
- * keypad; word answers (names, days, times) use the device keyboard.
- * [focusRequester] goes on the first keypad key, or on the text box for word answers.
+ * Tap-and-pick answers: one big lettered button per option. Phones stack them;
+ * wide screens (TV) show two per row. After checking ([reveal]), the right answer
+ * turns green and a wrong pick turns red. [focusRequester] goes on choice A.
  */
 @Composable
-fun AnswerInput(
+fun ChoiceButtons(
     question: Question,
-    value: String,
-    onValueChange: (String) -> Unit,
-    enabled: Boolean = true,
+    selected: String?,
+    onSelect: (String) -> Unit,
+    reveal: Boolean = false,
     focusRequester: FocusRequester? = null,
-    onDone: () -> Unit = {},
 ) {
+    val options = remember(question.id) { ChoiceMaker.optionsFor(question) }
+    val columns = if (LocalWide.current) 2 else 1
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Text("Answer:", style = MaterialTheme.typography.titleMedium)
-            Spacer(Modifier.padding(4.dp))
-            if (question.unitBefore.isNotEmpty()) Text(question.unitBefore, style = MaterialTheme.typography.titleLarge)
-            if (question.kind == AnswerKind.WORD) {
-                OutlinedTextField(
-                    value = value,
-                    onValueChange = onValueChange,
-                    enabled = enabled,
-                    singleLine = true,
-                    modifier = Modifier.weight(1f).optionalFocus(focusRequester),
-                    textStyle = MaterialTheme.typography.titleLarge,
-                    keyboardOptions = KeyboardOptions(
-                        capitalization = KeyboardCapitalization.Words,
-                        keyboardType = KeyboardType.Text,
-                        imeAction = ImeAction.Done,
-                    ),
-                    keyboardActions = KeyboardActions(onDone = { onDone() }),
-                )
-            } else {
-                Box(
-                    Modifier
-                        .weight(1f)
-                        .heightIn(min = 56.dp)
-                        .border(2.dp, MaterialTheme.colorScheme.outline, RoundedCornerShape(8.dp))
-                        .padding(horizontal = 12.dp),
-                    contentAlignment = Alignment.CenterStart,
-                ) {
-                    Text(
-                        value.ifEmpty { " " },
-                        style = MaterialTheme.typography.headlineSmall,
-                        fontWeight = FontWeight.SemiBold,
-                    )
+        Text("Pick the answer:", style = MaterialTheme.typography.titleMedium)
+        options.withIndex().chunked(columns).forEach { row ->
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                row.forEach { (i, option) ->
+                    val right = AnswerChecker.isCorrect(question, option)
+                    val picked = option == selected
+                    val (container, content) = when {
+                        reveal && right -> rightColor to Color.White
+                        reveal && picked -> wrongColor to Color.White
+                        picked -> MaterialTheme.colorScheme.primary to MaterialTheme.colorScheme.onPrimary
+                        else -> MaterialTheme.colorScheme.surface to MaterialTheme.colorScheme.onSurface
+                    }
+                    val letter = choiceLetter(i)
+                    Button(
+                        onClick = { if (!reveal) onSelect(option) },
+                        modifier = Modifier
+                            .weight(1f)
+                            .heightIn(min = 60.dp)
+                            .optionalFocus(if (i == 0) focusRequester else null)
+                            .focusRing(RoundedCornerShape(14.dp))
+                            .testTag("choice-$letter"),
+                        shape = RoundedCornerShape(14.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = container, contentColor = content),
+                        border = BorderStroke(2.dp, if (picked || (reveal && right)) container else MaterialTheme.colorScheme.outline),
+                        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 10.dp),
+                    ) {
+                        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                            Text(letter, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                            Spacer(Modifier.padding(horizontal = 8.dp))
+                            Text(ChoiceMaker.label(question, option), fontSize = 20.sp, fontWeight = FontWeight.Medium)
+                        }
+                    }
                 }
+                repeat(columns - row.size) { Spacer(Modifier.weight(1f)) }
             }
-            if (question.unit.isNotEmpty()) {
-                Spacer(Modifier.padding(4.dp))
-                Text(question.unit, style = MaterialTheme.typography.titleMedium)
-            }
-        }
-        if (question.kind == AnswerKind.NUMBER && enabled) {
-            Keypad(firstKey = focusRequester, onKey = { onValueChange(applyAnswerKey(value, it)) })
         }
     }
 }
 
-@Composable
-private fun Keypad(firstKey: FocusRequester?, onKey: (String) -> Unit) {
-    val rows = listOf(
-        listOf("7", "8", "9", "⌫"),
-        listOf("4", "5", "6", "/"),
-        listOf("1", "2", "3", "."),
-        listOf("0", "Clear"),
-    )
-    val keyHeight = if (LocalWide.current) 48.dp else 52.dp
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        rows.forEachIndexed { r, row ->
-            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                row.forEachIndexed { c, key ->
-                    FilledTonalButton(
-                        onClick = { onKey(key) },
-                        modifier = Modifier
-                            .weight(if (row.size == 2) 2f else 1f)
-                            .height(keyHeight)
-                            .optionalFocus(if (r == 0 && c == 0) firstKey else null)
-                            .focusRing(RoundedCornerShape(10.dp))
-                            .testTag("key-$key"),
-                        contentPadding = PaddingValues(0.dp),
-                        shape = RoundedCornerShape(10.dp),
-                    ) {
-                        Text(key, fontSize = if (key.length > 1) 16.sp else 22.sp, textAlign = TextAlign.Center)
-                    }
-                }
-            }
-        }
-    }
+/** "A", "B", "C", "D". */
+fun choiceLetter(index: Int): String = ('A' + index).toString()
+
+/** "B) 30 feet": an answer written with its letter, for results and review. */
+fun lettered(question: Question, option: String): String {
+    val i = ChoiceMaker.optionsFor(question).indexOf(option)
+    val label = ChoiceMaker.label(question, option)
+    return if (i < 0) label else "${choiceLetter(i)}) $label"
 }
 
 /** Formats seconds as m:ss. */

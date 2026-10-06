@@ -35,6 +35,11 @@ data class Question(
     val hint: String,
     val solution: String,
     val figure: Figure? = null,
+    /**
+     * Hand-written wrong answers for the tap-and-pick options, usually common
+     * mistakes. [ChoiceMaker] fills in the rest for number answers.
+     */
+    val choices: List<String> = emptyList(),
 )
 
 @Serializable

@@ -122,7 +122,11 @@
       "answer": "A",
       "kind": "WORD",
       "hint": "The pattern repeats every 4 letters.",
-      "solution": "50 ÷ 4 = 12 remainder 2. After 12 full FALLs (48 letters), the 49th letter is F and the 50th is A."
+      "solution": "50 ÷ 4 = 12 remainder 2. After 12 full FALLs (48 letters), the 49th letter is F and the 50th is A.",
+      "choices": [
+        "F",
+        "L"
+      ]
     },
     {
       "id": "g4f-s04-q12",
@@ -176,7 +180,11 @@
       "answer": "Cole",
       "kind": "WORD",
       "hint": "Try each kid as the cookie eater and count how many statements are true.",
-      "solution": "If Alex ate it, Alex and Cole tell the truth (2 true). If Bree ate it, Bree and Cole tell the truth (2 true). If Cole ate it, only Bree tells the truth (1 true). So Cole ate it."
+      "solution": "If Alex ate it, Alex and Cole tell the truth (2 true). If Bree ate it, Bree and Cole tell the truth (2 true). If Cole ate it, only Bree tells the truth (1 true). So Cole ate it.",
+      "choices": [
+        "Alex",
+        "Bree"
+      ]
     },
     {
       "id": "g4f-s04-q17",
@@ -187,7 +195,12 @@
       "answer": "47",
       "unit": "numbers",
       "hint": "Count the multiples of 3, count the multiples of 5, then think about numbers you counted twice.",
-      "solution": "Multiples of 3: 33. Multiples of 5: 20. Multiples of both (multiples of 15): 15, 30, 45, 60, 75, 90, which is 6, and they were counted twice. 33 + 20 − 6 = 47."
+      "solution": "Multiples of 3: 33. Multiples of 5: 20. Multiples of both (multiples of 15): 15, 30, 45, 60, 75, 90, which is 6, and they were counted twice. 33 + 20 − 6 = 47.",
+      "choices": [
+        "53",
+        "33",
+        "41"
+      ]
     },
     {
       "id": "g4f-s04-q18",
@@ -233,7 +246,12 @@
           "3": "4 cm",
           "5": "8 cm"
         }
-      }
+      },
+      "choices": [
+        "32",
+        "48",
+        "36"
+      ]
     },
     {
       "id": "g4f-s04-q19",
@@ -249,7 +267,12 @@
         "type": "grid",
         "rows": 1,
         "cols": 3
-      }
+      },
+      "choices": [
+        "100",
+        "75",
+        "73"
+      ]
     },
     {
       "id": "g4f-s04-q20",
@@ -260,7 +283,12 @@
       "answer": "3",
       "unit": "minutes",
       "hint": "The pan should never have an empty spot. Try flipping only one of the two pancakes after the first minute.",
-      "solution": "Call the pancakes A, B, C. Minute 1: A side 1, B side 1. Minute 2: A side 2, C side 1. Minute 3: B side 2, C side 2. All 6 sides are cooked in 3 minutes, and it can't be faster because the pan cooks only 2 sides per minute."
+      "solution": "Call the pancakes A, B, C. Minute 1: A side 1, B side 1. Minute 2: A side 2, C side 1. Minute 3: B side 2, C side 2. All 6 sides are cooked in 3 minutes, and it can't be faster because the pan cooks only 2 sides per minute.",
+      "choices": [
+        "4",
+        "6",
+        "2"
+      ]
     }
   ]
 }

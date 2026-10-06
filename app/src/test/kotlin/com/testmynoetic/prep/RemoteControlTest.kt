@@ -11,6 +11,7 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performKeyInput
 import androidx.compose.ui.test.pressKey
+import com.testmynoetic.core.ChoiceMaker
 import com.testmynoetic.prep.ui.PrepApp
 import com.testmynoetic.prep.ui.PrepTheme
 import kotlin.test.assertEquals
@@ -73,25 +74,35 @@ class RemoteControlTest {
     fun testCanBeAnsweredWithTheRemote() {
         vm.startExam(vm.bank.sets.first())
         start()
-        compose.onNodeWithTag("key-7").assertIsFocused()
-
-        // Type 1000 with the on-screen keypad: down to 1, select, then down to 0 and select three times.
-        reach(compose.onNodeWithTag("key-1"), listOf(Key.DirectionDown, Key.DirectionDown))
-        press(Key.DirectionCenter)
-        reach(compose.onNodeWithTag("key-0"), listOf(Key.DirectionDown))
-        repeat(3) { press(Key.DirectionCenter) }
         val exam = (vm.backStack.last() as Screen.Exam).session
-        assertEquals("1000", exam.answers[0])
+        val options = ChoiceMaker.optionsFor(exam.questions[0])
 
-        // Number buttons on a remote or keyboard type straight into the answer.
-        press(Key.Backspace)
-        press(Key.Zero)
-        assertEquals("1000", exam.answers[0])
+        // Focus starts on choice A; move right to B and pick it.
+        compose.onNodeWithTag("choice-A").assertIsFocused()
+        press(Key.DirectionRight)
+        compose.onNodeWithTag("choice-B").assertIsFocused()
+        press(Key.DirectionCenter)
+        assertEquals(options[1], exam.answers[0])
 
-        val next = compose.onNodeWithTag("next")
-        reach(next, listOf(Key.DirectionDown, Key.DirectionRight, Key.DirectionRight, Key.DirectionRight))
+        // Then down to Next and on to question 2.
+        reach(compose.onNodeWithTag("next"), listOf(Key.DirectionDown, Key.DirectionDown, Key.DirectionRight, Key.DirectionRight, Key.DirectionRight))
         press(Key.DirectionCenter)
         assertEquals(1, exam.index)
         compose.onNodeWithText("Question 2 of 20").assertExists()
+    }
+
+    @Test
+    fun practiceCanBeCheckedWithTheRemote() {
+        vm.startTopic(com.testmynoetic.core.Topic.NUMBER)
+        start()
+        val practice = (vm.backStack.last() as Screen.Practice).session
+        compose.onNodeWithTag("choice-A").assertIsFocused()
+        press(Key.DirectionCenter)
+        assertEquals(ChoiceMaker.optionsFor(practice.question!!)[0], practice.selected)
+        reach(compose.onNodeWithText("Check"), listOf(Key.DirectionDown, Key.DirectionDown, Key.DirectionDown, Key.DirectionRight))
+        press(Key.DirectionCenter)
+        assertTrue(practice.verdict != null)
+        // After checking, focus jumps to Next question.
+        compose.onNodeWithText("Next question").assertIsFocused()
     }
 }

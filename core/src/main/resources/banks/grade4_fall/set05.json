@@ -46,7 +46,12 @@
         "Tues"
       ],
       "hint": "Count backwards one day at a time.",
-      "solution": "1 day ago: Thursday. 2 days ago: Wednesday. 3 days ago: Tuesday."
+      "solution": "1 day ago: Thursday. 2 days ago: Wednesday. 3 days ago: Tuesday.",
+      "choices": [
+        "Monday",
+        "Wednesday",
+        "Thursday"
+      ]
     },
     {
       "id": "g4f-s05-q05",
@@ -72,7 +77,12 @@
         "2:35pm"
       ],
       "hint": "95 minutes is 1 hour and 35 minutes. Count backwards.",
-      "solution": "95 minutes = 1 hour 35 minutes. 4:10 PM − 1 hour = 3:10 PM. 3:10 PM − 35 minutes = 2:35 PM."
+      "solution": "95 minutes = 1 hour 35 minutes. 4:10 PM − 1 hour = 3:10 PM. 3:10 PM − 35 minutes = 2:35 PM.",
+      "choices": [
+        "2:45 PM",
+        "3:35 PM",
+        "2:25 PM"
+      ]
     },
     {
       "id": "g4f-s05-q07",
@@ -190,7 +200,12 @@
       "answer": "4",
       "unit": "spiders",
       "hint": "Pretend all 10 bugs are beetles. How many legs would that be?",
-      "solution": "10 beetles would have 60 legs. There are 68 − 60 = 8 extra legs. Each spider has 2 more legs than a beetle, so 8 ÷ 2 = 4 spiders."
+      "solution": "10 beetles would have 60 legs. There are 68 − 60 = 8 extra legs. Each spider has 2 more legs than a beetle, so 8 ÷ 2 = 4 spiders.",
+      "choices": [
+        "6",
+        "5",
+        "8"
+      ]
     },
     {
       "id": "g4f-s05-q17",
@@ -201,7 +216,12 @@
       "answer": "45",
       "unit": "numbers",
       "hint": "If the tens digit is 1, the ones digit can only be 0. If the tens digit is 2, how many choices?",
-      "solution": "Tens digit 1: 1 number (10). Tens digit 2: 2 numbers (20, 21). … Tens digit 9: 9 numbers. 1 + 2 + 3 + … + 9 = 45."
+      "solution": "Tens digit 1: 1 number (10). Tens digit 2: 2 numbers (20, 21). … Tens digit 9: 9 numbers. 1 + 2 + 3 + … + 9 = 45.",
+      "choices": [
+        "36",
+        "54",
+        "90"
+      ]
     },
     {
       "id": "g4f-s05-q18",
@@ -217,7 +237,12 @@
         "type": "grid",
         "rows": 2,
         "cols": 2
-      }
+      },
+      "choices": [
+        "80",
+        "20",
+        "60"
+      ]
     },
     {
       "id": "g4f-s05-q19",
@@ -228,7 +253,12 @@
       "answer": "3",
       "unit": "lockers",
       "hint": "A locker ends up open if it is changed an odd number of times. How many factors does each locker number have?",
-      "solution": "Locker n is changed once for each factor of n. Only numbers with an odd number of factors stay open: 1, 4 and 9 (they are square numbers). So 3 lockers are open."
+      "solution": "Locker n is changed once for each factor of n. Only numbers with an odd number of factors stay open: 1, 4 and 9 (they are square numbers). So 3 lockers are open.",
+      "choices": [
+        "5",
+        "4",
+        "10"
+      ]
     },
     {
       "id": "g4f-s05-q20",
@@ -238,7 +268,12 @@
       "prompt": "The sum of two numbers is 50. Their difference is 14. What is the product of the two numbers?",
       "answer": "576",
       "hint": "Find the two numbers first. Take away the difference, then split the rest in half.",
-      "solution": "50 − 14 = 36, and half of 36 is 18, the smaller number. The larger is 18 + 14 = 32. Product: 32 × 18 = 576."
+      "solution": "50 − 14 = 36, and half of 36 is 18, the smaller number. The larger is 18 + 14 = 32. Product: 32 × 18 = 576.",
+      "choices": [
+        "32",
+        "18",
+        "625"
+      ]
     }
   ]
 }

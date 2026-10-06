@@ -38,7 +38,7 @@ class ExamSession(val title: String, val questions: List<Question>) {
     }
 }
 
-/** One question at a time with a hint, instant checking and a worked solution. */
+/** One question at a time: pick a choice, check it, then see the worked solution. */
 class PracticeSession(
     val title: String,
     val mode: Mode,
@@ -48,7 +48,8 @@ class PracticeSession(
 
     var question by mutableStateOf(supplier())
         private set
-    var input by mutableStateOf("")
+    /** The choice the kid has picked but not checked yet. */
+    var selected by mutableStateOf<String?>(null)
     var verdict by mutableStateOf<Boolean?>(null)
         private set
     var showHint by mutableStateOf(false)
@@ -59,11 +60,12 @@ class PracticeSession(
     var right by mutableIntStateOf(0)
         private set
 
-    /** Grades the current input. Returns null if there's nothing to grade. */
+    /** Grades the picked choice. Returns null if nothing is picked yet. */
     fun check(): Boolean? {
         val q = question ?: return null
-        if (verdict != null || input.isBlank()) return null
-        val ok = AnswerChecker.isCorrect(q, input)
+        val pick = selected
+        if (verdict != null || pick == null) return null
+        val ok = AnswerChecker.isCorrect(q, pick)
         verdict = ok
         answered++
         if (ok) {
@@ -77,7 +79,7 @@ class PracticeSession(
 
     fun next() {
         question = supplier()
-        input = ""
+        selected = null
         verdict = null
         showHint = false
     }

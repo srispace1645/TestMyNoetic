@@ -45,7 +45,12 @@
         "Wed"
       ],
       "hint": "How many weeks is 14 days?",
-      "solution": "14 days is exactly 2 weeks, so it will be Wednesday again."
+      "solution": "14 days is exactly 2 weeks, so it will be Wednesday again.",
+      "choices": [
+        "Thursday",
+        "Tuesday",
+        "Friday"
+      ]
     },
     {
       "id": "g4f-s08-q05",
@@ -55,7 +60,12 @@
       "prompt": "What is the largest 3-digit odd number whose digits are all different?",
       "answer": "987",
       "hint": "Make the hundreds and tens digits as big as you can. The ones digit must be odd.",
-      "solution": "Start with 9 in the hundreds place and 8 in the tens place. The largest odd digit left for the ones place is 7. The answer is 987."
+      "solution": "Start with 9 in the hundreds place and 8 in the tens place. The largest odd digit left for the ones place is 7. The answer is 987.",
+      "choices": [
+        "999",
+        "989",
+        "975"
+      ]
     },
     {
       "id": "g4f-s08-q06",
@@ -205,7 +215,12 @@
       "answer": "Ben",
       "kind": "WORD",
       "hint": "Ben is in spot 2 or spot 4. Try both.",
-      "solution": "If Ben were in spot 4, Cy would have to be in spot 1 and Dot in spot 2, right next to Cy. That breaks a clue. So Ben is in spot 2."
+      "solution": "If Ben were in spot 4, Cy would have to be in spot 1 and Dot in spot 2, right next to Cy. That breaks a clue. So Ben is in spot 2.",
+      "choices": [
+        "Ana",
+        "Cy",
+        "Dot"
+      ]
     },
     {
       "id": "g4f-s08-q16",
@@ -216,7 +231,12 @@
       "answer": "10",
       "unit": "years old",
       "hint": "Grandpa is 60 years older than Sam. Take away the extra years first.",
-      "solution": "Dad has 30 extra years and Grandpa has 60 extra years compared to Sam. 120 − 30 − 60 = 30 is three times Sam's age, so Sam is 30 ÷ 3 = 10."
+      "solution": "Dad has 30 extra years and Grandpa has 60 extra years compared to Sam. 120 − 30 − 60 = 30 is three times Sam's age, so Sam is 30 ÷ 3 = 10.",
+      "choices": [
+        "30",
+        "40",
+        "20"
+      ]
     },
     {
       "id": "g4f-s08-q17",
@@ -226,7 +246,12 @@
       "prompt": "The 3-digit number 4□3 is a multiple of 9. What digit goes in the box?",
       "answer": "2",
       "hint": "A number is a multiple of 9 when its digits add up to a multiple of 9.",
-      "solution": "The digits add up to 4 + □ + 3 = 7 + □. The only digit that makes this a multiple of 9 is 2 (7 + 2 = 9). Check: 423 = 9 × 47. ✓"
+      "solution": "The digits add up to 4 + □ + 3 = 7 + □. The only digit that makes this a multiple of 9 is 2 (7 + 2 = 9). Check: 423 = 9 × 47. ✓",
+      "choices": [
+        "9",
+        "0",
+        "6"
+      ]
     },
     {
       "id": "g4f-s08-q18",
@@ -237,7 +262,12 @@
       "answer": "6",
       "unit": "cubes",
       "hint": "Which small cubes touch only one outside face? Look at the middle of each face.",
-      "solution": "Only the center cube of each face has exactly one painted face. A cube has 6 faces, so 6 small cubes."
+      "solution": "Only the center cube of each face has exactly one painted face. A cube has 6 faces, so 6 small cubes.",
+      "choices": [
+        "8",
+        "12",
+        "1"
+      ]
     },
     {
       "id": "g4f-s08-q19",
@@ -253,7 +283,12 @@
         "type": "grid",
         "rows": 2,
         "cols": 3
-      }
+      },
+      "choices": [
+        "6",
+        "12",
+        "5"
+      ]
     },
     {
       "id": "g4f-s08-q20",
@@ -264,7 +299,12 @@
       "answer": "255",
       "unitBefore": "$",
       "hint": "Write down how much she saves each week: 1, 2, 4, …",
-      "solution": "Weeks 1 to 8: 1, 2, 4, 8, 16, 32, 64, 128. Total: 1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 = $255."
+      "solution": "Weeks 1 to 8: 1, 2, 4, 8, 16, 32, 64, 128. Total: 1 + 2 + 4 + 8 + 16 + 32 + 64 + 128 = $255.",
+      "choices": [
+        "128",
+        "256",
+        "127"
+      ]
     }
   ]
 }

@@ -15,8 +15,10 @@ progress on the device only.
 - **Review Mistakes**: missed questions come back until they're answered right twice in a row.
 - **My Progress**: test history and how you're doing in each topic.
 
-Everything works with a TV remote: arrow keys to move, the center button to
-select, Back to go back. Remotes with number buttons can type answers directly.
+Every question is **tap-and-pick**: big A/B/C/D buttons, no typing and no
+keyboard. The wrong choices are common mistakes, not random numbers. Everything
+works with a TV remote: arrow keys to move, the center button to select, Back
+to go back.
 
 ## Get the app file (APK)
 1. On GitHub, open this repo's **Actions** tab and click the latest green **Build app** run.
@@ -69,6 +71,10 @@ To update later, download the newest APK and repeat steps 3, 4 and 6.
   grade or season by adding a folder and listing it in `manifest.json`.
 - Every bank answer is re-solved independently in
   `core/src/test/kotlin/com/testmynoetic/core/verify/`.
+- `ChoiceMaker` (`core/.../Choices.kt`) builds the tap-and-pick options:
+  hand-written traps from each question's `choices` first, then near-misses in
+  the same format as the answer. `ChoicesTest` checks every question has exactly
+  one right option.
 - `app/` is the Jetpack Compose UI. It's only included in the build when an
   Android SDK is installed (`ANDROID_HOME` or `local.properties`).
 - `app/src/test/` has Robolectric tests that drive the app with remote-control

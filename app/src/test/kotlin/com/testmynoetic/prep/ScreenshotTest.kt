@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
+import com.testmynoetic.core.ChoiceMaker
 import com.testmynoetic.prep.ui.ExamScreen
 import com.testmynoetic.prep.ui.HomeScreen
 import com.testmynoetic.prep.ui.PracticeScreen
@@ -55,7 +56,10 @@ class ScreenshotTest {
 
     @Test fun tvTests() = shot("tv_2_practice_tests") { SetsScreen(vm) }
 
-    @Test fun tvExamShape() = shot("tv_3_exam_shape") { ExamScreen(vm, examAt(15)) }
+    @Test fun tvExamShape() {
+        val exam = examAt(15).apply { answers[15] = ChoiceMaker.optionsFor(questions[15])[1] }
+        shot("tv_3_exam_shape") { ExamScreen(vm, exam) }
+    }
 
     @Test fun tvExamPyramid() = shot("tv_4_exam_pyramid") { ExamScreen(vm, examAt(11)) }
 
@@ -64,7 +68,7 @@ class ScreenshotTest {
     @Test fun tvPracticeSolution() {
         val q = set1.questions[15]
         val session = PracticeSession("Geometry & Measurement", PracticeSession.Mode.TOPIC) { q }
-        session.input = "42"
+        session.selected = "42"
         session.check()
         shot("tv_6_practice_solution") { PracticeScreen(vm, session) }
     }

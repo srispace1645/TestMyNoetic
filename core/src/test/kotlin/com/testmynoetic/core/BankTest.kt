@@ -92,6 +92,19 @@ class BankTest {
     }
 
     @Test
+    fun handWrittenChoicesAreRealWrongAnswers() {
+        bank.allQuestions.forEach { q ->
+            if (q.kind == AnswerKind.WORD) assertTrue(q.choices.size >= 2, "${q.id} needs hand-written choices")
+            assertEquals(q.choices.size, q.choices.toSet().size, "${q.id} repeats a choice")
+            q.choices.forEach { choice ->
+                assertTrue(!AnswerChecker.isCorrect(q, choice), "${q.id}: trap '$choice' is actually correct")
+                if (q.kind == AnswerKind.NUMBER) assertNotNull(Rational.parse(choice), "${q.id}: trap '$choice' is not a number")
+                assertTrue(choice in ChoiceMaker.optionsFor(q), "${q.id}: trap '$choice' isn't shown")
+            }
+        }
+    }
+
+    @Test
     fun everySolutionStatesItsAnswer() {
         bank.allQuestions.forEach { q ->
             val forms = listOfNotNull(q.answer, q.answer.toIntOrNull()?.let { "%,d".format(java.util.Locale.US, it) })

@@ -42,7 +42,12 @@
       "answer": "Jo",
       "kind": "WORD",
       "hint": "Line them up from oldest to youngest.",
-      "solution": "Oldest to youngest: Ivy, Jo, Kai, Lu. Jo is second oldest."
+      "solution": "Oldest to youngest: Ivy, Jo, Kai, Lu. Jo is second oldest.",
+      "choices": [
+        "Ivy",
+        "Kai",
+        "Lu"
+      ]
     },
     {
       "id": "g4f-s09-q05",
@@ -186,7 +191,12 @@
       "answer": "28",
       "unit": "pumpkins",
       "hint": "Undo the afternoon first: before selling the extra 2, he had 4 + 2.",
-      "solution": "Afternoon: 4 + 2 = 6 is half of what he had, so he had 12 at noon. Morning: 12 + 2 = 14 is half of what he started with, so he started with 28. Check: sell 14 + 2 = 16, leaving 12; sell 6 + 2 = 8, leaving 4. ✓"
+      "solution": "Afternoon: 4 + 2 = 6 is half of what he had, so he had 12 at noon. Morning: 12 + 2 = 14 is half of what he started with, so he started with 28. Check: sell 14 + 2 = 16, leaving 12; sell 6 + 2 = 8, leaving 4. ✓",
+      "choices": [
+        "24",
+        "18",
+        "22"
+      ]
     },
     {
       "id": "g4f-s09-q17",
@@ -197,7 +207,12 @@
       "answer": "15",
       "unit": "times",
       "hint": "Count 3s in the ones place and 3s in the tens place separately.",
-      "solution": "Ones place: 3, 13, 23, 33, 43, which is 5 times. Tens place: 30 to 39, which is 10 times. Total: 5 + 10 = 15 times (33 has two 3s)."
+      "solution": "Ones place: 3, 13, 23, 33, 43, which is 5 times. Tens place: 30 to 39, which is 10 times. Total: 5 + 10 = 15 times (33 has two 3s).",
+      "choices": [
+        "14",
+        "5",
+        "10"
+      ]
     },
     {
       "id": "g4f-s09-q18",
@@ -208,7 +223,12 @@
       "answer": "6",
       "unit": "squares",
       "hint": "The side of each square must divide both 12 and 8.",
-      "solution": "The largest number that divides both 12 and 8 is 4, so each square is 4 by 4. Along the 12-inch side: 3 squares. Along the 8-inch side: 2 squares. 3 × 2 = 6 squares."
+      "solution": "The largest number that divides both 12 and 8 is 4, so each square is 4 by 4. Along the 12-inch side: 3 squares. Along the 8-inch side: 2 squares. 3 × 2 = 6 squares.",
+      "choices": [
+        "24",
+        "4",
+        "96"
+      ]
     },
     {
       "id": "g4f-s09-q19",
@@ -219,7 +239,12 @@
       "answer": "48",
       "unit": "ways",
       "hint": "Glue Ana and Ben together into one block. Then remember the block can be Ana-Ben or Ben-Ana.",
-      "solution": "Treat Ana and Ben as one block. Now there are 4 things to line up: 4 × 3 × 2 × 1 = 24 ways. Inside the block they can stand Ana-Ben or Ben-Ana, so 24 × 2 = 48 ways."
+      "solution": "Treat Ana and Ben as one block. Now there are 4 things to line up: 4 × 3 × 2 × 1 = 24 ways. Inside the block they can stand Ana-Ben or Ben-Ana, so 24 × 2 = 48 ways.",
+      "choices": [
+        "24",
+        "120",
+        "12"
+      ]
     },
     {
       "id": "g4f-s09-q20",
@@ -230,7 +255,12 @@
       "answer": "5",
       "unit": "minutes",
       "hint": "How much closer do they get each minute?",
-      "solution": "Each minute they get 3 + 5 = 8 blocks closer. 40 ÷ 8 = 5 minutes."
+      "solution": "Each minute they get 3 + 5 = 8 blocks closer. 40 ÷ 8 = 5 minutes.",
+      "choices": [
+        "8",
+        "20",
+        "10"
+      ]
     }
   ]
 }

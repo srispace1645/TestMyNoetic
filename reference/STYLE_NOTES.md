@@ -39,6 +39,16 @@ Some of their questions can't be solved, so don't use them as an answer source:
   (90 + 2A = 89). Its answer key solves a different problem.
 - Several of them ask two or three things in one question, which real papers never do.
 
+## Tap-and-pick in the app
+The real contest is write-in, but the app shows every question as multiple
+choice so it works well with a TV remote. To keep it honest:
+- wrong choices are common mistakes. They're hand-written for every word answer
+  and for the five hardest questions in each set; the rest are near-misses in
+  the answer's own format (±1, ±10, doubled, halved, swapped digits; round
+  answers get round near-misses);
+- the right answer's position (A–D), and whether it's the biggest or smallest
+  option, varies from question to question.
+
 ## Rules this app's bank follows
 - Each 20-question set has 5 questions from each topic, ordered easy to hard
   (difficulty 1 → 3), starting with a warm-up.

@@ -142,7 +142,12 @@
         "8:36am"
       ],
       "hint": "Find the smallest number that is a multiple of both 12 and 18.",
-      "solution": "Bus A: 12, 24, 36, … minutes. Bus B: 18, 36, … minutes. The first time both lists match is 36 minutes after 8:00 AM, which is 8:36 AM."
+      "solution": "Bus A: 12, 24, 36, … minutes. Bus B: 18, 36, … minutes. The first time both lists match is 36 minutes after 8:00 AM, which is 8:36 AM.",
+      "choices": [
+        "8:30 AM",
+        "8:24 AM",
+        "8:54 AM"
+      ]
     },
     {
       "id": "g4f-s10-q14",
@@ -231,7 +236,12 @@
       "prompt": "What is the sum of all the whole numbers from 1 to 50?\n1 + 2 + 3 + … + 49 + 50",
       "answer": "1275",
       "hint": "Pair 1 with 50, 2 with 49, and so on. How many pairs are there?",
-      "solution": "Each pair adds to 51: 1 + 50, 2 + 49, …, 25 + 26. There are 25 pairs. 25 × 51 = 1,275."
+      "solution": "Each pair adds to 51: 1 + 50, 2 + 49, …, 25 + 26. There are 25 pairs. 25 × 51 = 1,275.",
+      "choices": [
+        "1250",
+        "2550",
+        "1225"
+      ]
     },
     {
       "id": "g4f-s10-q17",
@@ -242,7 +252,12 @@
       "answer": "13",
       "unit": "years old",
       "hint": "The time from 4 years ago to 5 years from now is 9 years.",
-      "solution": "From 4 years ago to 5 years from now is 9 years. Her age then doubles, so her age 4 years ago was 9. Tia is 9 + 4 = 13. Check: in 5 years she is 18 = 2 × 9. ✓"
+      "solution": "From 4 years ago to 5 years from now is 9 years. Her age then doubles, so her age 4 years ago was 9. Tia is 9 + 4 = 13. Check: in 5 years she is 18 = 2 × 9. ✓",
+      "choices": [
+        "9",
+        "18",
+        "11"
+      ]
     },
     {
       "id": "g4f-s10-q18",
@@ -253,7 +268,12 @@
       "answer": "74",
       "unit": "sq cm",
       "hint": "Find the area of the bottom, the two long sides and the two short sides.",
-      "solution": "Bottom: 5 × 4 = 20. Long sides: 2 × (5 × 3) = 30. Short sides: 2 × (4 × 3) = 24. Total: 20 + 30 + 24 = 74 sq cm."
+      "solution": "Bottom: 5 × 4 = 20. Long sides: 2 × (5 × 3) = 30. Short sides: 2 × (4 × 3) = 24. Total: 20 + 30 + 24 = 74 sq cm.",
+      "choices": [
+        "94",
+        "60",
+        "54"
+      ]
     },
     {
       "id": "g4f-s10-q19",
@@ -264,7 +284,12 @@
       "answer": "25",
       "unit": "kids",
       "hint": "How many kids could there be with no 3 sharing a month?",
-      "solution": "It's possible to have 2 kids in every month, which is 2 × 12 = 24 kids, with no 3 in the same month. One more kid makes 3 in some month. So 25 kids."
+      "solution": "It's possible to have 2 kids in every month, which is 2 × 12 = 24 kids, with no 3 in the same month. One more kid makes 3 in some month. So 25 kids.",
+      "choices": [
+        "24",
+        "13",
+        "37"
+      ]
     },
     {
       "id": "g4f-s10-q20",
@@ -313,7 +338,12 @@
           }
         ],
         "showGrid": true
-      }
+      },
+      "choices": [
+        "66",
+        "91",
+        "144"
+      ]
     }
   ]
 }

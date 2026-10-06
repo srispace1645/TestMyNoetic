@@ -222,7 +222,12 @@
         "type": "grid",
         "rows": 1,
         "cols": 3
-      }
+      },
+      "choices": [
+        "36",
+        "144",
+        "96"
+      ]
     },
     {
       "id": "g4f-s02-q17",
@@ -233,7 +238,12 @@
       "answer": "111",
       "unit": "digits",
       "hint": "Pages 1–9 use 1 digit each. Pages 10–60 use 2 digits each.",
-      "solution": "Pages 1–9: 9 digits. Pages 10–60: that's 51 pages with 2 digits each, so 102 digits. 9 + 102 = 111 digits."
+      "solution": "Pages 1–9: 9 digits. Pages 10–60: that's 51 pages with 2 digits each, so 102 digits. 9 + 102 = 111 digits.",
+      "choices": [
+        "120",
+        "60",
+        "102"
+      ]
     },
     {
       "id": "g4f-s02-q18",
@@ -244,7 +254,12 @@
       "answer": "Dee",
       "kind": "WORD",
       "hint": "Eli is 5th. Put the others in order using the clues.",
-      "solution": "Eli is 5th. Ava is ahead of Ben, Ben is ahead of Dee, and Cal is right after Dee. The only order is Ava, Ben, Dee, Cal, Eli. Dee is 3rd."
+      "solution": "Eli is 5th. Ava is ahead of Ben, Ben is ahead of Dee, and Cal is right after Dee. The only order is Ava, Ben, Dee, Cal, Eli. Dee is 3rd.",
+      "choices": [
+        "Ben",
+        "Cal",
+        "Ava"
+      ]
     },
     {
       "id": "g4f-s02-q19",
@@ -255,7 +270,12 @@
       "answer": "8",
       "unit": "cubes",
       "hint": "The unpainted cubes are hidden in the middle. Take away the outside layer.",
-      "solution": "Removing the outside layer leaves a 2 × 2 × 2 cube in the middle. 2 × 2 × 2 = 8 cubes have no paint."
+      "solution": "Removing the outside layer leaves a 2 × 2 × 2 cube in the middle. 2 × 2 × 2 = 8 cubes have no paint.",
+      "choices": [
+        "27",
+        "24",
+        "56"
+      ]
     },
     {
       "id": "g4f-s02-q20",
@@ -266,7 +286,12 @@
       "answer": "44",
       "unit": "pieces",
       "hint": "Start at the end with 9 pieces and undo each step.",
-      "solution": "Undo the last step: before giving half to her friend she had 9 × 2 = 18. Before eating 4 she had 18 + 4 = 22. Before giving half to her brother she had 22 × 2 = 44 pieces."
+      "solution": "Undo the last step: before giving half to her friend she had 9 × 2 = 18. Before eating 4 she had 18 + 4 = 22. Before giving half to her brother she had 22 × 2 = 44 pieces.",
+      "choices": [
+        "22",
+        "28",
+        "36"
+      ]
     }
   ]
 }

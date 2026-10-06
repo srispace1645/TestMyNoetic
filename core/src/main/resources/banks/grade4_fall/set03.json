@@ -42,7 +42,11 @@
       "answer": "Lee",
       "kind": "WORD",
       "hint": "Put the three names in order from tallest to shortest.",
-      "solution": "From tallest to shortest: Sam, Kim, Lee. Lee is the shortest."
+      "solution": "From tallest to shortest: Sam, Kim, Lee. Lee is the shortest.",
+      "choices": [
+        "Sam",
+        "Kim"
+      ]
     },
     {
       "id": "g4f-s03-q05",
@@ -52,7 +56,12 @@
       "prompt": "Round 3,748 to the nearest hundred.",
       "answer": "3700",
       "hint": "Is 3,748 closer to 3,700 or to 3,800?",
-      "solution": "Look at the tens digit, 4. It is less than 5, so round down: 3,748 → 3,700."
+      "solution": "Look at the tens digit, 4. It is less than 5, so round down: 3,748 → 3,700.",
+      "choices": [
+        "3800",
+        "3750",
+        "3740"
+      ]
     },
     {
       "id": "g4f-s03-q06",
@@ -199,7 +208,12 @@
       "answer": "16",
       "unit": "posts",
       "hint": "Walk all the way around the garden. A closed loop is different from a straight fence.",
-      "solution": "The distance around the garden is 4 × 12 = 48 meters. Going around a closed loop, there is one post for every 3 meters: 48 ÷ 3 = 16 posts. (There is no extra post, because the last gap ends at the first post.)"
+      "solution": "The distance around the garden is 4 × 12 = 48 meters. Going around a closed loop, there is one post for every 3 meters: 48 ÷ 3 = 16 posts. (There is no extra post, because the last gap ends at the first post.)",
+      "choices": [
+        "17",
+        "15",
+        "12"
+      ]
     },
     {
       "id": "g4f-s03-q17",
@@ -210,7 +224,12 @@
       "answer": "33",
       "unit": "cards",
       "hint": "List the numbers between 20 and 40 that leave 3 left over when split into 5s.",
-      "solution": "Numbers between 20 and 40 with 3 left over in piles of 5: 23, 28, 33, 38. Piles of 4: 23 leaves 3, 28 leaves 0, 33 leaves 1, 38 leaves 2. Only 33 works."
+      "solution": "Numbers between 20 and 40 with 3 left over in piles of 5: 23, 28, 33, 38. Piles of 4: 23 leaves 3, 28 leaves 0, 33 leaves 1, 38 leaves 2. Only 33 works.",
+      "choices": [
+        "28",
+        "23",
+        "38"
+      ]
     },
     {
       "id": "g4f-s03-q18",
@@ -221,7 +240,12 @@
       "answer": "Cy",
       "kind": "WORD",
       "hint": "Work backwards: undo the last switch first.",
-      "solution": "End: Amy, Bo, Cy, Di. Undo the 3–4 switch: Amy, Bo, Di, Cy. Undo the 2–4 switch: Amy, Cy, Di, Bo. Undo the 1–2 switch: Cy, Amy, Di, Bo. So Cy sat in seat 1 at the beginning."
+      "solution": "End: Amy, Bo, Cy, Di. Undo the 3–4 switch: Amy, Bo, Di, Cy. Undo the 2–4 switch: Amy, Cy, Di, Bo. Undo the 1–2 switch: Cy, Amy, Di, Bo. So Cy sat in seat 1 at the beginning.",
+      "choices": [
+        "Amy",
+        "Bo",
+        "Di"
+      ]
     },
     {
       "id": "g4f-s03-q19",
@@ -232,7 +256,12 @@
       "answer": "6",
       "unit": "years",
       "hint": "Try adding the same number of years to both ages and check.",
-      "solution": "The difference in their ages is always 28. When Mom is 3 times Ravi's age, the difference is 2 times Ravi's age, so Ravi will be 28 ÷ 2 = 14. That is 14 − 8 = 6 years from now. Check: 42 = 3 × 14. ✓"
+      "solution": "The difference in their ages is always 28. When Mom is 3 times Ravi's age, the difference is 2 times Ravi's age, so Ravi will be 28 ÷ 2 = 14. That is 14 − 8 = 6 years from now. Check: 42 = 3 × 14. ✓",
+      "choices": [
+        "14",
+        "4",
+        "12"
+      ]
     },
     {
       "id": "g4f-s03-q20",
@@ -243,7 +272,12 @@
       "answer": "5",
       "unit": "ways",
       "hint": "Start with the biggest coin. Can you use a quarter?",
-      "solution": "With a quarter: 25 + 5 (1 way). Without a quarter: 3 dimes; 2 dimes + 2 nickels; 1 dime + 4 nickels; 6 nickels (4 ways). Total: 5 ways."
+      "solution": "With a quarter: 25 + 5 (1 way). Without a quarter: 3 dimes; 2 dimes + 2 nickels; 1 dime + 4 nickels; 6 nickels (4 ways). Total: 5 ways.",
+      "choices": [
+        "4",
+        "6",
+        "7"
+      ]
     }
   ]
 }

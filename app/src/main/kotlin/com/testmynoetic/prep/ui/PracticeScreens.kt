@@ -18,7 +18,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.testmynoetic.core.AnswerKind
 import com.testmynoetic.core.DrillKind
 import com.testmynoetic.core.Topic
 import com.testmynoetic.prep.AppViewModel
@@ -98,17 +97,13 @@ fun PracticeScreen(vm: AppViewModel, session: PracticeSession) {
             Button(onClick = vm::back, modifier = Modifier.fillMaxWidth().optionalFocus(nextFocus).focusRing()) { Text("Back") }
             return@Page
         }
-        val typeKeys = Modifier.answerKeys(q.kind == AnswerKind.NUMBER && verdict == null) { key ->
-            session.input = applyAnswerKey(session.input, key)
-        }
         val answerSide = @Composable {
-            AnswerInput(
+            ChoiceButtons(
                 question = q,
-                value = session.input,
-                onValueChange = { session.input = it },
-                enabled = verdict == null,
+                selected = session.selected,
+                onSelect = { session.selected = it },
+                reveal = verdict != null,
                 focusRequester = answerFocus,
-                onDone = { vm.check(session) },
             )
             if (session.showHint && verdict == null) {
                 Card(
@@ -135,7 +130,7 @@ fun PracticeScreen(vm: AppViewModel, session: PracticeSession) {
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold,
                         )
-                        if (!verdict) Text("Answer: ${q.unitBefore}${q.answer} ${q.unit}".trim(), fontWeight = FontWeight.SemiBold)
+                        if (!verdict) Text("Answer: ${lettered(q, q.answer)}", fontWeight = FontWeight.SemiBold)
                         Text(q.solution, style = MaterialTheme.typography.bodyMedium)
                     }
                 }
@@ -145,12 +140,12 @@ fun PracticeScreen(vm: AppViewModel, session: PracticeSession) {
             }
         }
         if (LocalWide.current) {
-            Row(typeKeys.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(24.dp)) {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(24.dp)) {
                 Column(Modifier.weight(1.15f)) { QuestionCard(q, number = null) }
                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(12.dp)) { answerSide() }
             }
         } else {
-            Column(typeKeys, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 QuestionCard(q, number = null)
                 answerSide()
             }

@@ -42,7 +42,6 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.testmynoetic.core.AnswerKind
 import com.testmynoetic.core.QuestionSet
 import com.testmynoetic.core.Topic
 import com.testmynoetic.prep.AppViewModel
@@ -116,16 +115,13 @@ fun ExamScreen(vm: AppViewModel, session: ExamSession) {
             )
         },
     ) {
-        val typeKeys = Modifier.answerKeys(q.kind == AnswerKind.NUMBER) { key ->
-            session.answers[i] = applyAnswerKey(session.answers[i].orEmpty(), key)
-        }
         val answerSide = @Composable {
-            AnswerInput(
+            // Picking a choice can be changed any time before the test is finished.
+            ChoiceButtons(
                 question = q,
-                value = session.answers[i].orEmpty(),
-                onValueChange = { session.answers[i] = it },
+                selected = session.answers[i],
+                onSelect = { session.answers[i] = it },
                 focusRequester = answerFocus,
-                onDone = { if (!last) session.index = i + 1 },
             )
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
                 val flagged = session.flagged[i] == true
@@ -145,7 +141,7 @@ fun ExamScreen(vm: AppViewModel, session: ExamSession) {
             }
         }
         if (LocalWide.current) {
-            Row(typeKeys.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(24.dp)) {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(24.dp)) {
                 Column(Modifier.weight(1.15f), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     QuestionStrip(session)
                     QuestionCard(q, number = i + 1)
@@ -153,7 +149,7 @@ fun ExamScreen(vm: AppViewModel, session: ExamSession) {
                 Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(12.dp)) { answerSide() }
             }
         } else {
-            Column(typeKeys, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 QuestionStrip(session)
                 QuestionCard(q, number = i + 1)
                 answerSide()
@@ -268,9 +264,9 @@ fun ResultsScreen(vm: AppViewModel, session: ExamSession) {
                     if (expanded) {
                         Text(q.prompt, style = MaterialTheme.typography.bodyLarge)
                         q.figure?.let { FigureView(it) }
-                        val given = session.answers[idx].orEmpty().ifBlank { "(blank)" }
+                        val given = session.answers[idx]?.let { lettered(q, it) } ?: "(skipped)"
                         Text("Your answer: $given", color = if (right) rightColor else wrongColor)
-                        Text("Correct answer: ${q.unitBefore}${q.answer} ${q.unit}".trim(), fontWeight = FontWeight.SemiBold)
+                        Text("Correct answer: ${lettered(q, q.answer)}", fontWeight = FontWeight.SemiBold)
                         Text(q.solution, style = MaterialTheme.typography.bodyMedium)
                     }
                 }

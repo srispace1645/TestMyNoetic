@@ -57,7 +57,12 @@
         "Thurs"
       ],
       "hint": "In 7 days it will be Monday again.",
-      "solution": "7 days from Monday is Monday again. 3 more days: Tuesday, Wednesday, Thursday."
+      "solution": "7 days from Monday is Monday again. 3 more days: Tuesday, Wednesday, Thursday.",
+      "choices": [
+        "Wednesday",
+        "Friday",
+        "Tuesday"
+      ]
     },
     {
       "id": "g4f-s01-q06",
@@ -94,7 +99,12 @@
         "3:35pm"
       ],
       "hint": "Add the 1 hour first, then the 45 minutes.",
-      "solution": "1:50 PM + 1 hour = 2:50 PM. 2:50 PM + 10 minutes = 3:00 PM, and 35 more minutes makes 3:35 PM."
+      "solution": "1:50 PM + 1 hour = 2:50 PM. 2:50 PM + 10 minutes = 3:00 PM, and 35 more minutes makes 3:35 PM.",
+      "choices": [
+        "3:25 PM",
+        "2:35 PM",
+        "3:05 PM"
+      ]
     },
     {
       "id": "g4f-s01-q09",
@@ -244,7 +254,12 @@
           "4": "5 cm",
           "5": "6 cm"
         }
-      }
+      },
+      "choices": [
+        "48",
+        "28",
+        "36"
+      ]
     },
     {
       "id": "g4f-s01-q17",
@@ -255,7 +270,12 @@
       "answer": "7",
       "unit": "candies",
       "hint": "Imagine the unluckiest picks: how many can you take without getting 3 of one color?",
-      "solution": "Unluckiest case: 2 red, 2 green and 2 yellow, which is 6 candies with no 3 of a color. The 7th candy must make 3 of some color. Answer: 7."
+      "solution": "Unluckiest case: 2 red, 2 green and 2 yellow, which is 6 candies with no 3 of a color. The 7th candy must make 3 of some color. Answer: 7.",
+      "choices": [
+        "4",
+        "6",
+        "3"
+      ]
     },
     {
       "id": "g4f-s01-q18",
@@ -265,7 +285,12 @@
       "prompt": "Use each of the digits 2, 4, 6 and 8 exactly once to make two 2-digit numbers. What is the smallest possible difference between the two numbers?",
       "answer": "14",
       "hint": "Make the tens digits close together. Then make the bigger number's ones digit small and the smaller number's ones digit big.",
-      "solution": "Try tens digits 4 and 6: the bigger number should be as small as possible (62) and the smaller number as big as possible (48). 62 − 48 = 14. Other choices give bigger differences, like 46 − 28 = 18 or 82 − 64 = 18."
+      "solution": "Try tens digits 4 and 6: the bigger number should be as small as possible (62) and the smaller number as big as possible (48). 62 − 48 = 14. Other choices give bigger differences, like 46 − 28 = 18 or 82 − 64 = 18.",
+      "choices": [
+        "18",
+        "26",
+        "22"
+      ]
     },
     {
       "id": "g4f-s01-q19",
@@ -276,7 +301,12 @@
       "answer": "14",
       "unit": "years old",
       "hint": "In 3 years, both of them get 3 years older. What do their ages add up to now?",
-      "solution": "In 3 years each is 3 years older, so the total grows by 6. Now their ages add up to 30 − 6 = 24. Take away Owen's extra 4: 24 − 4 = 20, and half is 10, so Lily is 10 and Owen is 14."
+      "solution": "In 3 years each is 3 years older, so the total grows by 6. Now their ages add up to 30 − 6 = 24. Take away Owen's extra 4: 24 − 4 = 20, and half is 10, so Lily is 10 and Owen is 14.",
+      "choices": [
+        "10",
+        "17",
+        "13"
+      ]
     },
     {
       "id": "g4f-s01-q20",
@@ -287,7 +317,12 @@
       "answer": "30",
       "unit": "pieces",
       "hint": "How many pieces does one kid give away?",
-      "solution": "Each kid gives a piece to the 5 other kids, so each gives 5 pieces. 6 kids × 5 pieces = 30 pieces. (This is not like handshakes: Ana giving to Ben and Ben giving to Ana are 2 different pieces.)"
+      "solution": "Each kid gives a piece to the 5 other kids, so each gives 5 pieces. 6 kids × 5 pieces = 30 pieces. (This is not like handshakes: Ana giving to Ben and Ben giving to Ana are 2 different pieces.)",
+      "choices": [
+        "15",
+        "36",
+        "25"
+      ]
     }
   ]
 }
