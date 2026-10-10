@@ -3,10 +3,10 @@ a cover page, the 20 questions with answer blanks and room to work, and an
 answer key with worked solutions on separate pages at the end (so it can be
 pulled off before the test is handed out).
 
-Usage:
+Usage (from the project folder):
     pip install reportlab
     python tools/make_paper.py 1                  # writes build/Mathlete_Prep_Practice_Test_1.pdf
-    python tools/make_paper.py 3 my_test.pdf
+    python tools/make_paper.py 3 my_test.pdf      # test 3, saved as my_test.pdf
 """
 import html
 import json
@@ -26,7 +26,9 @@ from reportlab.platypus import (Flowable, KeepTogether, PageBreak, Paragraph, Si
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BANK = os.path.join(ROOT, "core", "src", "main", "resources", "banks", "grade4_fall")
-FONT_DIR = "/usr/share/fonts/truetype/dejavu"
+# The free DejaVu fonts ship next to this script (see fonts/LICENSE-DejaVu.txt), so it
+# works the same on Windows, Mac and Linux. They cover symbols like −, ×, ÷, □ and ▲.
+FONT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts")
 
 INK = colors.HexColor("#1E1B16")
 TEAL = colors.HexColor("#2F6F73")
