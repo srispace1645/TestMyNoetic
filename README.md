@@ -64,6 +64,16 @@ The laptop and the Fire TV must be on the same Wi-Fi.
 
 To update later, download the newest APK and repeat steps 3, 4 and 6.
 
+## Printable tests
+Each practice test can also be printed, laid out like the paper contest:
+a cover page, the 20 questions with answer lines and room to work, and an
+answer key with solutions on separate pages at the end.
+```
+pip install reportlab
+python tools/make_paper.py 1      # writes build/Mathlete_Prep_Practice_Test_1.pdf
+```
+Change `1` to any number from 1 to 10.
+
 ## For developers
 - `core/` is plain Kotlin: question model, answer checker, test grading,
   drills, progress. Run `./gradlew :core:test` with any JDK 17+ (no Android SDK needed).
